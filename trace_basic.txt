@@ -1,0 +1,30 @@
+TRACEPRINTER version 1.02
+TRACEPARSER LIBRARY version 1.02
+ -- HEADER FILE INFORMATION --
+       TRACE_FILE_NAME:: /dev/shmem/logfile.kev
+            TRACE_DATE:: Mon Oct 28 17:19:14 2013
+       TRACE_VER_MAJOR:: 1
+       TRACE_VER_MINOR:: 01
+   TRACE_LITTLE_ENDIAN:: TRUE
+        TRACE_ENCODING:: 16 byte events
+       TRACE_BOOT_DATE:: Mon Oct 28 11:46:56 2013
+  TRACE_CYCLES_PER_SEC:: 1000000000
+         TRACE_CPU_NUM:: 1
+         TRACE_SYSNAME:: QNX
+        TRACE_NODENAME:: localhost
+     TRACE_SYS_RELEASE:: 6.5.0
+     TRACE_SYS_VERSION:: 2010/07/09-14:44:03EDT
+     TRACE_SYSPAGE_LEN:: 2144
+         TRACE_MACHINE:: x86pc
+-- KERNEL EVENTS --
+t:0x1e CPU:00 PROCESS :PROCCREATE_NAME ppid:0 pid:1 name:some/directory/goes/here
+t:0x212 CPU:00 THREAD  :THCREATE    pid:1 tid:1 
+t:0x406 CPU:00 THREAD  :THREADY     pid:1 tid:1 
+t:0x5fa CPU:00 THREAD  :THCREATE    pid:1 tid:2 
+t:0x7ee CPU:00 THREAD  :THREADY     pid:1 tid:2 
+t:0x9e2 CPU:00 THREAD  :THCREATE    pid:1 tid:3 
+t:0xbd6 CPU:00 THREAD  :THREADY     pid:1 tid:3 
+t:0xdca CPU:00 THREAD  :THCREATE    pid:1 tid:4 
+t:0xfbe CPU:00 THREAD  :THREADY     pid:1 tid:4 
+t:0x11b2 CPU:00 THREAD  :THCREATE    pid:1 tid:5 
+t:0x13a6 CPU:00 THREAD  :THREADY     pid:1 tid:5 

@@ -1,0 +1,1119 @@
+TRACEPRINTER version 1.02
+TRACEPARSER LIBRARY version 1.02
+ -- HEADER FILE INFORMATION --
+       TRACE_FILE_NAME:: /dev/shmem/logfile.kev
+            TRACE_DATE:: Mon Oct 28 17:19:14 2013
+       TRACE_VER_MAJOR:: 1
+       TRACE_VER_MINOR:: 01
+   TRACE_LITTLE_ENDIAN:: TRUE
+        TRACE_ENCODING:: 16 byte events
+       TRACE_BOOT_DATE:: Mon Oct 28 11:46:56 2013
+  TRACE_CYCLES_PER_SEC:: 1000000000
+         TRACE_CPU_NUM:: 1
+         TRACE_SYSNAME:: QNX
+        TRACE_NODENAME:: localhost
+     TRACE_SYS_RELEASE:: 6.5.0
+     TRACE_SYS_VERSION:: 2010/07/09-14:44:03EDT
+     TRACE_SYSPAGE_LEN:: 2144
+         TRACE_MACHINE:: x86pc
+-- KERNEL EVENTS --
+t:0xd CPU:00 PROCESS :PROCCREATE_NAME ppid:0 pid:1 name:some/directory/goes/here
+t:0x201 CPU:00 THREAD  :THCREATE    pid:1 tid:1 
+t:0x3f5 CPU:00 THREAD  :THREADY     pid:1 tid:1 
+t:0x5e9 CPU:00 THREAD  :THCREATE    pid:1 tid:2 
+t:0x7dd CPU:00 THREAD  :THREADY     pid:1 tid:2 
+t:0x9d1 CPU:00 THREAD  :THCREATE    pid:1 tid:3 
+t:0xbc5 CPU:00 THREAD  :THREADY     pid:1 tid:3 
+t:0xdb9 CPU:00 THREAD  :THCREATE    pid:1 tid:4 
+t:0xfad CPU:00 THREAD  :THREADY     pid:1 tid:4 
+t:0x11a1 CPU:00 THREAD  :THCREATE    pid:1 tid:5 
+t:0x1395 CPU:00 THREAD  :THREADY     pid:1 tid:5 
+t:0x139f CPU:00 PROCESS :PROCCREATE_NAME ppid:1 pid:2 name:some/directory/goes/here
+t:0x1593 CPU:00 THREAD  :THCREATE    pid:2 tid:1 
+t:0x1787 CPU:00 THREAD  :THREADY     pid:2 tid:1 
+t:0x197b CPU:00 THREAD  :THCREATE    pid:2 tid:2 
+t:0x1b6f CPU:00 THREAD  :THREADY     pid:2 tid:2 
+t:0x1d63 CPU:00 THREAD  :THCREATE    pid:2 tid:3 
+t:0x1f57 CPU:00 THREAD  :THREADY     pid:2 tid:3 
+t:0x214b CPU:00 THREAD  :THCREATE    pid:2 tid:4 
+t:0x233f CPU:00 THREAD  :THREADY     pid:2 tid:4 
+t:0x2533 CPU:00 THREAD  :THCREATE    pid:2 tid:5 
+t:0x2727 CPU:00 THREAD  :THREADY     pid:2 tid:5 
+t:0x271d CPU:00 PROCESS :PROCCREATE_NAME ppid:2 pid:3 name:some/directory/goes/here
+t:0x2911 CPU:00 THREAD  :THCREATE    pid:3 tid:1 
+t:0x2b05 CPU:00 THREAD  :THREADY     pid:3 tid:1 
+t:0x2cf9 CPU:00 THREAD  :THCREATE    pid:3 tid:2 
+t:0x2eed CPU:00 THREAD  :THREADY     pid:3 tid:2 
+t:0x30e1 CPU:00 THREAD  :THCREATE    pid:3 tid:3 
+t:0x32d5 CPU:00 THREAD  :THREADY     pid:3 tid:3 
+t:0x34c9 CPU:00 THREAD  :THCREATE    pid:3 tid:4 
+t:0x36bd CPU:00 THREAD  :THREADY     pid:3 tid:4 
+t:0x38b1 CPU:00 THREAD  :THCREATE    pid:3 tid:5 
+t:0x3aa5 CPU:00 THREAD  :THREADY     pid:3 tid:5 
+t:0x3ac5 CPU:00 PROCESS :PROCCREATE_NAME ppid:3 pid:4 name:some/directory/goes/here
+t:0x3cb9 CPU:00 THREAD  :THCREATE    pid:4 tid:1 
+t:0x3ead CPU:00 THREAD  :THREADY     pid:4 tid:1 
+t:0x40a1 CPU:00 THREAD  :THCREATE    pid:4 tid:2 
+t:0x4295 CPU:00 THREAD  :THREADY     pid:4 tid:2 
+t:0x4489 CPU:00 THREAD  :THCREATE    pid:4 tid:3 
+t:0x467d CPU:00 THREAD  :THREADY     pid:4 tid:3 
+t:0x4871 CPU:00 THREAD  :THCREATE    pid:4 tid:4 
+t:0x4a65 CPU:00 THREAD  :THREADY     pid:4 tid:4 
+t:0x4c59 CPU:00 THREAD  :THCREATE    pid:4 tid:5 
+t:0x4e4d CPU:00 THREAD  :THREADY     pid:4 tid:5 
+t:0x4e55 CPU:00 PROCESS :PROCCREATE_NAME ppid:4 pid:5 name:some/directory/goes/here
+t:0x5049 CPU:00 THREAD  :THCREATE    pid:5 tid:1 
+t:0x523d CPU:00 THREAD  :THREADY     pid:5 tid:1 
+t:0x5431 CPU:00 THREAD  :THCREATE    pid:5 tid:2 
+t:0x5625 CPU:00 THREAD  :THREADY     pid:5 tid:2 
+t:0x5819 CPU:00 THREAD  :THCREATE    pid:5 tid:3 
+t:0x5a0d CPU:00 THREAD  :THREADY     pid:5 tid:3 
+t:0x5c01 CPU:00 THREAD  :THCREATE    pid:5 tid:4 
+t:0x5df5 CPU:00 THREAD  :THREADY     pid:5 tid:4 
+t:0x5fe9 CPU:00 THREAD  :THCREATE    pid:5 tid:5 
+t:0x61dd CPU:00 THREAD  :THREADY     pid:5 tid:5 
+t:0x61c8 CPU:00 PROCESS :PROCCREATE_NAME ppid:5 pid:6 name:some/directory/goes/here
+t:0x63bc CPU:00 THREAD  :THCREATE    pid:6 tid:1 
+t:0x65b0 CPU:00 THREAD  :THREADY     pid:6 tid:1 
+t:0x67a4 CPU:00 THREAD  :THCREATE    pid:6 tid:2 
+t:0x6998 CPU:00 THREAD  :THREADY     pid:6 tid:2 
+t:0x6b8c CPU:00 THREAD  :THCREATE    pid:6 tid:3 
+t:0x6d80 CPU:00 THREAD  :THREADY     pid:6 tid:3 
+t:0x6f74 CPU:00 THREAD  :THCREATE    pid:6 tid:4 
+t:0x7168 CPU:00 THREAD  :THREADY     pid:6 tid:4 
+t:0x735c CPU:00 THREAD  :THCREATE    pid:6 tid:5 
+t:0x7550 CPU:00 THREAD  :THREADY     pid:6 tid:5 
+t:0x7560 CPU:00 PROCESS :PROCCREATE_NAME ppid:6 pid:7 name:some/directory/goes/here
+t:0x7754 CPU:00 THREAD  :THCREATE    pid:7 tid:1 
+t:0x7948 CPU:00 THREAD  :THREADY     pid:7 tid:1 
+t:0x7b3c CPU:00 THREAD  :THCREATE    pid:7 tid:2 
+t:0x7d30 CPU:00 THREAD  :THREADY     pid:7 tid:2 
+t:0x7f24 CPU:00 THREAD  :THCREATE    pid:7 tid:3 
+t:0x8118 CPU:00 THREAD  :THREADY     pid:7 tid:3 
+t:0x830c CPU:00 THREAD  :THCREATE    pid:7 tid:4 
+t:0x8500 CPU:00 THREAD  :THREADY     pid:7 tid:4 
+t:0x86f4 CPU:00 THREAD  :THCREATE    pid:7 tid:5 
+t:0x88e8 CPU:00 THREAD  :THREADY     pid:7 tid:5 
+t:0x88fc CPU:00 PROCESS :PROCCREATE_NAME ppid:7 pid:8 name:some/directory/goes/here
+t:0x8af0 CPU:00 THREAD  :THCREATE    pid:8 tid:1 
+t:0x8ce4 CPU:00 THREAD  :THREADY     pid:8 tid:1 
+t:0x8ed8 CPU:00 THREAD  :THCREATE    pid:8 tid:2 
+t:0x90cc CPU:00 THREAD  :THREADY     pid:8 tid:2 
+t:0x92c0 CPU:00 THREAD  :THCREATE    pid:8 tid:3 
+t:0x94b4 CPU:00 THREAD  :THREADY     pid:8 tid:3 
+t:0x96a8 CPU:00 THREAD  :THCREATE    pid:8 tid:4 
+t:0x989c CPU:00 THREAD  :THREADY     pid:8 tid:4 
+t:0x9a90 CPU:00 THREAD  :THCREATE    pid:8 tid:5 
+t:0x9c84 CPU:00 THREAD  :THREADY     pid:8 tid:5 
+t:0x9cac CPU:00 PROCESS :PROCCREATE_NAME ppid:8 pid:9 name:some/directory/goes/here
+t:0x9ea0 CPU:00 THREAD  :THCREATE    pid:9 tid:1 
+t:0xa094 CPU:00 THREAD  :THREADY     pid:9 tid:1 
+t:0xa288 CPU:00 THREAD  :THCREATE    pid:9 tid:2 
+t:0xa47c CPU:00 THREAD  :THREADY     pid:9 tid:2 
+t:0xa670 CPU:00 THREAD  :THCREATE    pid:9 tid:3 
+t:0xa864 CPU:00 THREAD  :THREADY     pid:9 tid:3 
+t:0xaa58 CPU:00 THREAD  :THCREATE    pid:9 tid:4 
+t:0xac4c CPU:00 THREAD  :THREADY     pid:9 tid:4 
+t:0xae40 CPU:00 THREAD  :THCREATE    pid:9 tid:5 
+t:0xb034 CPU:00 THREAD  :THREADY     pid:9 tid:5 
+t:0xb04d CPU:00 PROCESS :PROCCREATE_NAME ppid:9 pid:10 name:some/directory/goes/here
+t:0xb241 CPU:00 THREAD  :THCREATE    pid:10 tid:1 
+t:0xb435 CPU:00 THREAD  :THREADY     pid:10 tid:1 
+t:0xb629 CPU:00 THREAD  :THCREATE    pid:10 tid:2 
+t:0xb81d CPU:00 THREAD  :THREADY     pid:10 tid:2 
+t:0xba11 CPU:00 THREAD  :THCREATE    pid:10 tid:3 
+t:0xbc05 CPU:00 THREAD  :THREADY     pid:10 tid:3 
+t:0xbdf9 CPU:00 THREAD  :THCREATE    pid:10 tid:4 
+t:0xbfed CPU:00 THREAD  :THREADY     pid:10 tid:4 
+t:0xc1e1 CPU:00 THREAD  :THCREATE    pid:10 tid:5 
+t:0xc3d5 CPU:00 THREAD  :THREADY     pid:10 tid:5 
+t:0xc3f1 CPU:00 PROCESS :PROCCREATE_NAME ppid:10 pid:11 name:some/directory/goes/here
+t:0xc5e5 CPU:00 THREAD  :THCREATE    pid:11 tid:1 
+t:0xc7d9 CPU:00 THREAD  :THREADY     pid:11 tid:1 
+t:0xc9cd CPU:00 THREAD  :THCREATE    pid:11 tid:2 
+t:0xcbc1 CPU:00 THREAD  :THREADY     pid:11 tid:2 
+t:0xcdb5 CPU:00 THREAD  :THCREATE    pid:11 tid:3 
+t:0xcfa9 CPU:00 THREAD  :THREADY     pid:11 tid:3 
+t:0xd19d CPU:00 THREAD  :THCREATE    pid:11 tid:4 
+t:0xd391 CPU:00 THREAD  :THREADY     pid:11 tid:4 
+t:0xd585 CPU:00 THREAD  :THCREATE    pid:11 tid:5 
+t:0xd779 CPU:00 THREAD  :THREADY     pid:11 tid:5 
+t:0xd755 CPU:00 PROCESS :PROCCREATE_NAME ppid:11 pid:12 name:some/directory/goes/here
+t:0xd949 CPU:00 THREAD  :THCREATE    pid:12 tid:1 
+t:0xdb3d CPU:00 THREAD  :THREADY     pid:12 tid:1 
+t:0xdd31 CPU:00 THREAD  :THCREATE    pid:12 tid:2 
+t:0xdf25 CPU:00 THREAD  :THREADY     pid:12 tid:2 
+t:0xe119 CPU:00 THREAD  :THCREATE    pid:12 tid:3 
+t:0xe30d CPU:00 THREAD  :THREADY     pid:12 tid:3 
+t:0xe501 CPU:00 THREAD  :THCREATE    pid:12 tid:4 
+t:0xe6f5 CPU:00 THREAD  :THREADY     pid:12 tid:4 
+t:0xe8e9 CPU:00 THREAD  :THCREATE    pid:12 tid:5 
+t:0xeadd CPU:00 THREAD  :THREADY     pid:12 tid:5 
+t:0xeae3 CPU:00 PROCESS :PROCCREATE_NAME ppid:12 pid:13 name:some/directory/goes/here
+t:0xecd7 CPU:00 THREAD  :THCREATE    pid:13 tid:1 
+t:0xeecb CPU:00 THREAD  :THREADY     pid:13 tid:1 
+t:0xf0bf CPU:00 THREAD  :THCREATE    pid:13 tid:2 
+t:0xf2b3 CPU:00 THREAD  :THREADY     pid:13 tid:2 
+t:0xf4a7 CPU:00 THREAD  :THCREATE    pid:13 tid:3 
+t:0xf69b CPU:00 THREAD  :THREADY     pid:13 tid:3 
+t:0xf88f CPU:00 THREAD  :THCREATE    pid:13 tid:4 
+t:0xfa83 CPU:00 THREAD  :THREADY     pid:13 tid:4 
+t:0xfc77 CPU:00 THREAD  :THCREATE    pid:13 tid:5 
+t:0xfe6b CPU:00 THREAD  :THREADY     pid:13 tid:5 
+t:0xfe5f CPU:00 PROCESS :PROCCREATE_NAME ppid:13 pid:14 name:some/directory/goes/here
+t:0x10053 CPU:00 THREAD  :THCREATE    pid:14 tid:1 
+t:0x10247 CPU:00 THREAD  :THREADY     pid:14 tid:1 
+t:0x1043b CPU:00 THREAD  :THCREATE    pid:14 tid:2 
+t:0x1062f CPU:00 THREAD  :THREADY     pid:14 tid:2 
+t:0x10823 CPU:00 THREAD  :THCREATE    pid:14 tid:3 
+t:0x10a17 CPU:00 THREAD  :THREADY     pid:14 tid:3 
+t:0x10c0b CPU:00 THREAD  :THCREATE    pid:14 tid:4 
+t:0x10dff CPU:00 THREAD  :THREADY     pid:14 tid:4 
+t:0x10ff3 CPU:00 THREAD  :THCREATE    pid:14 tid:5 
+t:0x111e7 CPU:00 THREAD  :THREADY     pid:14 tid:5 
+t:0x111e3 CPU:00 PROCESS :PROCCREATE_NAME ppid:14 pid:15 name:some/directory/goes/here
+t:0x113d7 CPU:00 THREAD  :THCREATE    pid:15 tid:1 
+t:0x115cb CPU:00 THREAD  :THREADY     pid:15 tid:1 
+t:0x117bf CPU:00 THREAD  :THCREATE    pid:15 tid:2 
+t:0x119b3 CPU:00 THREAD  :THREADY     pid:15 tid:2 
+t:0x11ba7 CPU:00 THREAD  :THCREATE    pid:15 tid:3 
+t:0x11d9b CPU:00 THREAD  :THREADY     pid:15 tid:3 
+t:0x11f8f CPU:00 THREAD  :THCREATE    pid:15 tid:4 
+t:0x12183 CPU:00 THREAD  :THREADY     pid:15 tid:4 
+t:0x12377 CPU:00 THREAD  :THCREATE    pid:15 tid:5 
+t:0x1256b CPU:00 THREAD  :THREADY     pid:15 tid:5 
+t:0x1256b CPU:00 PROCESS :PROCCREATE_NAME ppid:15 pid:16 name:some/directory/goes/here
+t:0x1275f CPU:00 THREAD  :THCREATE    pid:16 tid:1 
+t:0x12953 CPU:00 THREAD  :THREADY     pid:16 tid:1 
+t:0x12b47 CPU:00 THREAD  :THCREATE    pid:16 tid:2 
+t:0x12d3b CPU:00 THREAD  :THREADY     pid:16 tid:2 
+t:0x12f2f CPU:00 THREAD  :THCREATE    pid:16 tid:3 
+t:0x13123 CPU:00 THREAD  :THREADY     pid:16 tid:3 
+t:0x13317 CPU:00 THREAD  :THCREATE    pid:16 tid:4 
+t:0x1350b CPU:00 THREAD  :THREADY     pid:16 tid:4 
+t:0x136ff CPU:00 THREAD  :THCREATE    pid:16 tid:5 
+t:0x138f3 CPU:00 THREAD  :THREADY     pid:16 tid:5 
+t:0x13902 CPU:00 PROCESS :PROCCREATE_NAME ppid:16 pid:17 name:some/directory/goes/here
+t:0x13af6 CPU:00 THREAD  :THCREATE    pid:17 tid:1 
+t:0x13cea CPU:00 THREAD  :THREADY     pid:17 tid:1 
+t:0x13ede CPU:00 THREAD  :THCREATE    pid:17 tid:2 
+t:0x140d2 CPU:00 THREAD  :THREADY     pid:17 tid:2 
+t:0x142c6 CPU:00 THREAD  :THCREATE    pid:17 tid:3 
+t:0x144ba CPU:00 THREAD  :THREADY     pid:17 tid:3 
+t:0x146ae CPU:00 THREAD  :THCREATE    pid:17 tid:4 
+t:0x148a2 CPU:00 THREAD  :THREADY     pid:17 tid:4 
+t:0x14a96 CPU:00 THREAD  :THCREATE    pid:17 tid:5 
+t:0x14c8a CPU:00 THREAD  :THREADY     pid:17 tid:5 
+t:0x14c8f CPU:00 PROCESS :PROCCREATE_NAME ppid:17 pid:18 name:some/directory/goes/here
+t:0x14e83 CPU:00 THREAD  :THCREATE    pid:18 tid:1 
+t:0x15077 CPU:00 THREAD  :THREADY     pid:18 tid:1 
+t:0x1526b CPU:00 THREAD  :THCREATE    pid:18 tid:2 
+t:0x1545f CPU:00 THREAD  :THREADY     pid:18 tid:2 
+t:0x15653 CPU:00 THREAD  :THCREATE    pid:18 tid:3 
+t:0x15847 CPU:00 THREAD  :THREADY     pid:18 tid:3 
+t:0x15a3b CPU:00 THREAD  :THCREATE    pid:18 tid:4 
+t:0x15c2f CPU:00 THREAD  :THREADY     pid:18 tid:4 
+t:0x15e23 CPU:00 THREAD  :THCREATE    pid:18 tid:5 
+t:0x16017 CPU:00 THREAD  :THREADY     pid:18 tid:5 
+t:0x16013 CPU:00 PROCESS :PROCCREATE_NAME ppid:18 pid:19 name:some/directory/goes/here
+t:0x16207 CPU:00 THREAD  :THCREATE    pid:19 tid:1 
+t:0x163fb CPU:00 THREAD  :THREADY     pid:19 tid:1 
+t:0x165ef CPU:00 THREAD  :THCREATE    pid:19 tid:2 
+t:0x167e3 CPU:00 THREAD  :THREADY     pid:19 tid:2 
+t:0x169d7 CPU:00 THREAD  :THCREATE    pid:19 tid:3 
+t:0x16bcb CPU:00 THREAD  :THREADY     pid:19 tid:3 
+t:0x16dbf CPU:00 THREAD  :THCREATE    pid:19 tid:4 
+t:0x16fb3 CPU:00 THREAD  :THREADY     pid:19 tid:4 
+t:0x171a7 CPU:00 THREAD  :THCREATE    pid:19 tid:5 
+t:0x1739b CPU:00 THREAD  :THREADY     pid:19 tid:5 
+t:0x173ac CPU:00 PROCESS :PROCCREATE_NAME ppid:19 pid:20 name:some/directory/goes/here
+t:0x175a0 CPU:00 THREAD  :THCREATE    pid:20 tid:1 
+t:0x17794 CPU:00 THREAD  :THREADY     pid:20 tid:1 
+t:0x17988 CPU:00 THREAD  :THCREATE    pid:20 tid:2 
+t:0x17b7c CPU:00 THREAD  :THREADY     pid:20 tid:2 
+t:0x17d70 CPU:00 THREAD  :THCREATE    pid:20 tid:3 
+t:0x17f64 CPU:00 THREAD  :THREADY     pid:20 tid:3 
+t:0x18158 CPU:00 THREAD  :THCREATE    pid:20 tid:4 
+t:0x1834c CPU:00 THREAD  :THREADY     pid:20 tid:4 
+t:0x18540 CPU:00 THREAD  :THCREATE    pid:20 tid:5 
+t:0x18734 CPU:00 THREAD  :THREADY     pid:20 tid:5 
+t:0x18724 CPU:00 PROCESS :PROCCREATE_NAME ppid:20 pid:21 name:some/directory/goes/here
+t:0x18918 CPU:00 THREAD  :THCREATE    pid:21 tid:1 
+t:0x18b0c CPU:00 THREAD  :THREADY     pid:21 tid:1 
+t:0x18d00 CPU:00 THREAD  :THCREATE    pid:21 tid:2 
+t:0x18ef4 CPU:00 THREAD  :THREADY     pid:21 tid:2 
+t:0x190e8 CPU:00 THREAD  :THCREATE    pid:21 tid:3 
+t:0x192dc CPU:00 THREAD  :THREADY     pid:21 tid:3 
+t:0x194d0 CPU:00 THREAD  :THCREATE    pid:21 tid:4 
+t:0x196c4 CPU:00 THREAD  :THREADY     pid:21 tid:4 
+t:0x198b8 CPU:00 THREAD  :THCREATE    pid:21 tid:5 
+t:0x19aac CPU:00 THREAD  :THREADY     pid:21 tid:5 
+t:0x19ac4 CPU:00 PROCESS :PROCCREATE_NAME ppid:21 pid:22 name:some/directory/goes/here
+t:0x19cb8 CPU:00 THREAD  :THCREATE    pid:22 tid:1 
+t:0x19eac CPU:00 THREAD  :THREADY     pid:22 tid:1 
+t:0x1a0a0 CPU:00 THREAD  :THCREATE    pid:22 tid:2 
+t:0x1a294 CPU:00 THREAD  :THREADY     pid:22 tid:2 
+t:0x1a488 CPU:00 THREAD  :THCREATE    pid:22 tid:3 
+t:0x1a67c CPU:00 THREAD  :THREADY     pid:22 tid:3 
+t:0x1a870 CPU:00 THREAD  :THCREATE    pid:22 tid:4 
+t:0x1aa64 CPU:00 THREAD  :THREADY     pid:22 tid:4 
+t:0x1ac58 CPU:00 THREAD  :THCREATE    pid:22 tid:5 
+t:0x1ae4c CPU:00 THREAD  :THREADY     pid:22 tid:5 
+t:0x1ae5a CPU:00 PROCESS :PROCCREATE_NAME ppid:22 pid:23 name:some/directory/goes/here
+t:0x1b04e CPU:00 THREAD  :THCREATE    pid:23 tid:1 
+t:0x1b242 CPU:00 THREAD  :THREADY     pid:23 tid:1 
+t:0x1b436 CPU:00 THREAD  :THCREATE    pid:23 tid:2 
+t:0x1b62a CPU:00 THREAD  :THREADY     pid:23 tid:2 
+t:0x1b81e CPU:00 THREAD  :THCREATE    pid:23 tid:3 
+t:0x1ba12 CPU:00 THREAD  :THREADY     pid:23 tid:3 
+t:0x1bc06 CPU:00 THREAD  :THCREATE    pid:23 tid:4 
+t:0x1bdfa CPU:00 THREAD  :THREADY     pid:23 tid:4 
+t:0x1bfee CPU:00 THREAD  :THCREATE    pid:23 tid:5 
+t:0x1c1e2 CPU:00 THREAD  :THREADY     pid:23 tid:5 
+t:0x1c1dd CPU:00 PROCESS :PROCCREATE_NAME ppid:23 pid:24 name:some/directory/goes/here
+t:0x1c3d1 CPU:00 THREAD  :THCREATE    pid:24 tid:1 
+t:0x1c5c5 CPU:00 THREAD  :THREADY     pid:24 tid:1 
+t:0x1c7b9 CPU:00 THREAD  :THCREATE    pid:24 tid:2 
+t:0x1c9ad CPU:00 THREAD  :THREADY     pid:24 tid:2 
+t:0x1cba1 CPU:00 THREAD  :THCREATE    pid:24 tid:3 
+t:0x1cd95 CPU:00 THREAD  :THREADY     pid:24 tid:3 
+t:0x1cf89 CPU:00 THREAD  :THCREATE    pid:24 tid:4 
+t:0x1d17d CPU:00 THREAD  :THREADY     pid:24 tid:4 
+t:0x1d371 CPU:00 THREAD  :THCREATE    pid:24 tid:5 
+t:0x1d565 CPU:00 THREAD  :THREADY     pid:24 tid:5 
+t:0x1d56d CPU:00 PROCESS :PROCCREATE_NAME ppid:24 pid:25 name:some/directory/goes/here
+t:0x1d761 CPU:00 THREAD  :THCREATE    pid:25 tid:1 
+t:0x1d955 CPU:00 THREAD  :THREADY     pid:25 tid:1 
+t:0x1db49 CPU:00 THREAD  :THCREATE    pid:25 tid:2 
+t:0x1dd3d CPU:00 THREAD  :THREADY     pid:25 tid:2 
+t:0x1df31 CPU:00 THREAD  :THCREATE    pid:25 tid:3 
+t:0x1e125 CPU:00 THREAD  :THREADY     pid:25 tid:3 
+t:0x1e319 CPU:00 THREAD  :THCREATE    pid:25 tid:4 
+t:0x1e50d CPU:00 THREAD  :THREADY     pid:25 tid:4 
+t:0x1e701 CPU:00 THREAD  :THCREATE    pid:25 tid:5 
+t:0x1e8f5 CPU:00 THREAD  :THREADY     pid:25 tid:5 
+t:0x1e8cf CPU:00 PROCESS :PROCCREATE_NAME ppid:25 pid:26 name:some/directory/goes/here
+t:0x1eac3 CPU:00 THREAD  :THCREATE    pid:26 tid:1 
+t:0x1ecb7 CPU:00 THREAD  :THREADY     pid:26 tid:1 
+t:0x1eeab CPU:00 THREAD  :THCREATE    pid:26 tid:2 
+t:0x1f09f CPU:00 THREAD  :THREADY     pid:26 tid:2 
+t:0x1f293 CPU:00 THREAD  :THCREATE    pid:26 tid:3 
+t:0x1f487 CPU:00 THREAD  :THREADY     pid:26 tid:3 
+t:0x1f67b CPU:00 THREAD  :THCREATE    pid:26 tid:4 
+t:0x1f86f CPU:00 THREAD  :THREADY     pid:26 tid:4 
+t:0x1fa63 CPU:00 THREAD  :THCREATE    pid:26 tid:5 
+t:0x1fc57 CPU:00 THREAD  :THREADY     pid:26 tid:5 
+t:0x1fc51 CPU:00 PROCESS :PROCCREATE_NAME ppid:26 pid:27 name:some/directory/goes/here
+t:0x1fe45 CPU:00 THREAD  :THCREATE    pid:27 tid:1 
+t:0x20039 CPU:00 THREAD  :THREADY     pid:27 tid:1 
+t:0x2022d CPU:00 THREAD  :THCREATE    pid:27 tid:2 
+t:0x20421 CPU:00 THREAD  :THREADY     pid:27 tid:2 
+t:0x20615 CPU:00 THREAD  :THCREATE    pid:27 tid:3 
+t:0x20809 CPU:00 THREAD  :THREADY     pid:27 tid:3 
+t:0x209fd CPU:00 THREAD  :THCREATE    pid:27 tid:4 
+t:0x20bf1 CPU:00 THREAD  :THREADY     pid:27 tid:4 
+t:0x20de5 CPU:00 THREAD  :THCREATE    pid:27 tid:5 
+t:0x20fd9 CPU:00 THREAD  :THREADY     pid:27 tid:5 
+t:0x20fb1 CPU:00 PROCESS :PROCCREATE_NAME ppid:27 pid:28 name:some/directory/goes/here
+t:0x211a5 CPU:00 THREAD  :THCREATE    pid:28 tid:1 
+t:0x21399 CPU:00 THREAD  :THREADY     pid:28 tid:1 
+t:0x2158d CPU:00 THREAD  :THCREATE    pid:28 tid:2 
+t:0x21781 CPU:00 THREAD  :THREADY     pid:28 tid:2 
+t:0x21975 CPU:00 THREAD  :THCREATE    pid:28 tid:3 
+t:0x21b69 CPU:00 THREAD  :THREADY     pid:28 tid:3 
+t:0x21d5d CPU:00 THREAD  :THCREATE    pid:28 tid:4 
+t:0x21f51 CPU:00 THREAD  :THREADY     pid:28 tid:4 
+t:0x22145 CPU:00 THREAD  :THCREATE    pid:28 tid:5 
+t:0x22339 CPU:00 THREAD  :THREADY     pid:28 tid:5 
+t:0x22350 CPU:00 PROCESS :PROCCREATE_NAME ppid:28 pid:29 name:some/directory/goes/here
+t:0x22544 CPU:00 THREAD  :THCREATE    pid:29 tid:1 
+t:0x22738 CPU:00 THREAD  :THREADY     pid:29 tid:1 
+t:0x2292c CPU:00 THREAD  :THCREATE    pid:29 tid:2 
+t:0x22b20 CPU:00 THREAD  :THREADY     pid:29 tid:2 
+t:0x22d14 CPU:00 THREAD  :THCREATE    pid:29 tid:3 
+t:0x22f08 CPU:00 THREAD  :THREADY     pid:29 tid:3 
+t:0x230fc CPU:00 THREAD  :THCREATE    pid:29 tid:4 
+t:0x232f0 CPU:00 THREAD  :THREADY     pid:29 tid:4 
+t:0x234e4 CPU:00 THREAD  :THCREATE    pid:29 tid:5 
+t:0x236d8 CPU:00 THREAD  :THREADY     pid:29 tid:5 
+t:0x236cf CPU:00 PROCESS :PROCCREATE_NAME ppid:29 pid:30 name:some/directory/goes/here
+t:0x238c3 CPU:00 THREAD  :THCREATE    pid:30 tid:1 
+t:0x23ab7 CPU:00 THREAD  :THREADY     pid:30 tid:1 
+t:0x23cab CPU:00 THREAD  :THCREATE    pid:30 tid:2 
+t:0x23e9f CPU:00 THREAD  :THREADY     pid:30 tid:2 
+t:0x24093 CPU:00 THREAD  :THCREATE    pid:30 tid:3 
+t:0x24287 CPU:00 THREAD  :THREADY     pid:30 tid:3 
+t:0x2447b CPU:00 THREAD  :THCREATE    pid:30 tid:4 
+t:0x2466f CPU:00 THREAD  :THREADY     pid:30 tid:4 
+t:0x24863 CPU:00 THREAD  :THCREATE    pid:30 tid:5 
+t:0x24a57 CPU:00 THREAD  :THREADY     pid:30 tid:5 
+t:0x24a46 CPU:00 PROCESS :PROCCREATE_NAME ppid:30 pid:31 name:some/directory/goes/here
+t:0x24c3a CPU:00 THREAD  :THCREATE    pid:31 tid:1 
+t:0x24e2e CPU:00 THREAD  :THREADY     pid:31 tid:1 
+t:0x25022 CPU:00 THREAD  :THCREATE    pid:31 tid:2 
+t:0x25216 CPU:00 THREAD  :THREADY     pid:31 tid:2 
+t:0x2540a CPU:00 THREAD  :THCREATE    pid:31 tid:3 
+t:0x255fe CPU:00 THREAD  :THREADY     pid:31 tid:3 
+t:0x257f2 CPU:00 THREAD  :THCREATE    pid:31 tid:4 
+t:0x259e6 CPU:00 THREAD  :THREADY     pid:31 tid:4 
+t:0x25bda CPU:00 THREAD  :THCREATE    pid:31 tid:5 
+t:0x25dce CPU:00 THREAD  :THREADY     pid:31 tid:5 
+t:0x25dd7 CPU:00 PROCESS :PROCCREATE_NAME ppid:31 pid:32 name:some/directory/goes/here
+t:0x25fcb CPU:00 THREAD  :THCREATE    pid:32 tid:1 
+t:0x261bf CPU:00 THREAD  :THREADY     pid:32 tid:1 
+t:0x263b3 CPU:00 THREAD  :THCREATE    pid:32 tid:2 
+t:0x265a7 CPU:00 THREAD  :THREADY     pid:32 tid:2 
+t:0x2679b CPU:00 THREAD  :THCREATE    pid:32 tid:3 
+t:0x2698f CPU:00 THREAD  :THREADY     pid:32 tid:3 
+t:0x26b83 CPU:00 THREAD  :THCREATE    pid:32 tid:4 
+t:0x26d77 CPU:00 THREAD  :THREADY     pid:32 tid:4 
+t:0x26f6b CPU:00 THREAD  :THCREATE    pid:32 tid:5 
+t:0x2715f CPU:00 THREAD  :THREADY     pid:32 tid:5 
+t:0x2716c CPU:00 PROCESS :PROCCREATE_NAME ppid:32 pid:33 name:some/directory/goes/here
+t:0x27360 CPU:00 THREAD  :THCREATE    pid:33 tid:1 
+t:0x27554 CPU:00 THREAD  :THREADY     pid:33 tid:1 
+t:0x27748 CPU:00 THREAD  :THCREATE    pid:33 tid:2 
+t:0x2793c CPU:00 THREAD  :THREADY     pid:33 tid:2 
+t:0x27b30 CPU:00 THREAD  :THCREATE    pid:33 tid:3 
+t:0x27d24 CPU:00 THREAD  :THREADY     pid:33 tid:3 
+t:0x27f18 CPU:00 THREAD  :THCREATE    pid:33 tid:4 
+t:0x2810c CPU:00 THREAD  :THREADY     pid:33 tid:4 
+t:0x28300 CPU:00 THREAD  :THCREATE    pid:33 tid:5 
+t:0x284f4 CPU:00 THREAD  :THREADY     pid:33 tid:5 
+t:0x284ee CPU:00 PROCESS :PROCCREATE_NAME ppid:33 pid:34 name:some/directory/goes/here
+t:0x286e2 CPU:00 THREAD  :THCREATE    pid:34 tid:1 
+t:0x288d6 CPU:00 THREAD  :THREADY     pid:34 tid:1 
+t:0x28aca CPU:00 THREAD  :THCREATE    pid:34 tid:2 
+t:0x28cbe CPU:00 THREAD  :THREADY     pid:34 tid:2 
+t:0x28eb2 CPU:00 THREAD  :THCREATE    pid:34 tid:3 
+t:0x290a6 CPU:00 THREAD  :THREADY     pid:34 tid:3 
+t:0x2929a CPU:00 THREAD  :THCREATE    pid:34 tid:4 
+t:0x2948e CPU:00 THREAD  :THREADY     pid:34 tid:4 
+t:0x29682 CPU:00 THREAD  :THCREATE    pid:34 tid:5 
+t:0x29876 CPU:00 THREAD  :THREADY     pid:34 tid:5 
+t:0x2988d CPU:00 PROCESS :PROCCREATE_NAME ppid:34 pid:35 name:some/directory/goes/here
+t:0x29a81 CPU:00 THREAD  :THCREATE    pid:35 tid:1 
+t:0x29c75 CPU:00 THREAD  :THREADY     pid:35 tid:1 
+t:0x29e69 CPU:00 THREAD  :THCREATE    pid:35 tid:2 
+t:0x2a05d CPU:00 THREAD  :THREADY     pid:35 tid:2 
+t:0x2a251 CPU:00 THREAD  :THCREATE    pid:35 tid:3 
+t:0x2a445 CPU:00 THREAD  :THREADY     pid:35 tid:3 
+t:0x2a639 CPU:00 THREAD  :THCREATE    pid:35 tid:4 
+t:0x2a82d CPU:00 THREAD  :THREADY     pid:35 tid:4 
+t:0x2aa21 CPU:00 THREAD  :THCREATE    pid:35 tid:5 
+t:0x2ac15 CPU:00 THREAD  :THREADY     pid:35 tid:5 
+t:0x2ac1c CPU:00 PROCESS :PROCCREATE_NAME ppid:35 pid:36 name:some/directory/goes/here
+t:0x2ae10 CPU:00 THREAD  :THCREATE    pid:36 tid:1 
+t:0x2b004 CPU:00 THREAD  :THREADY     pid:36 tid:1 
+t:0x2b1f8 CPU:00 THREAD  :THCREATE    pid:36 tid:2 
+t:0x2b3ec CPU:00 THREAD  :THREADY     pid:36 tid:2 
+t:0x2b5e0 CPU:00 THREAD  :THCREATE    pid:36 tid:3 
+t:0x2b7d4 CPU:00 THREAD  :THREADY     pid:36 tid:3 
+t:0x2b9c8 CPU:00 THREAD  :THCREATE    pid:36 tid:4 
+t:0x2bbbc CPU:00 THREAD  :THREADY     pid:36 tid:4 
+t:0x2bdb0 CPU:00 THREAD  :THCREATE    pid:36 tid:5 
+t:0x2bfa4 CPU:00 THREAD  :THREADY     pid:36 tid:5 
+t:0x2bf99 CPU:00 PROCESS :PROCCREATE_NAME ppid:36 pid:37 name:some/directory/goes/here
+t:0x2c18d CPU:00 THREAD  :THCREATE    pid:37 tid:1 
+t:0x2c381 CPU:00 THREAD  :THREADY     pid:37 tid:1 
+t:0x2c575 CPU:00 THREAD  :THCREATE    pid:37 tid:2 
+t:0x2c769 CPU:00 THREAD  :THREADY     pid:37 tid:2 
+t:0x2c95d CPU:00 THREAD  :THCREATE    pid:37 tid:3 
+t:0x2cb51 CPU:00 THREAD  :THREADY     pid:37 tid:3 
+t:0x2cd45 CPU:00 THREAD  :THCREATE    pid:37 tid:4 
+t:0x2cf39 CPU:00 THREAD  :THREADY     pid:37 tid:4 
+t:0x2d12d CPU:00 THREAD  :THCREATE    pid:37 tid:5 
+t:0x2d321 CPU:00 THREAD  :THREADY     pid:37 tid:5 
+t:0x2d329 CPU:00 PROCESS :PROCCREATE_NAME ppid:37 pid:38 name:some/directory/goes/here
+t:0x2d51d CPU:00 THREAD  :THCREATE    pid:38 tid:1 
+t:0x2d711 CPU:00 THREAD  :THREADY     pid:38 tid:1 
+t:0x2d905 CPU:00 THREAD  :THCREATE    pid:38 tid:2 
+t:0x2daf9 CPU:00 THREAD  :THREADY     pid:38 tid:2 
+t:0x2dced CPU:00 THREAD  :THCREATE    pid:38 tid:3 
+t:0x2dee1 CPU:00 THREAD  :THREADY     pid:38 tid:3 
+t:0x2e0d5 CPU:00 THREAD  :THCREATE    pid:38 tid:4 
+t:0x2e2c9 CPU:00 THREAD  :THREADY     pid:38 tid:4 
+t:0x2e4bd CPU:00 THREAD  :THCREATE    pid:38 tid:5 
+t:0x2e6b1 CPU:00 THREAD  :THREADY     pid:38 tid:5 
+t:0x2e6bc CPU:00 PROCESS :PROCCREATE_NAME ppid:38 pid:39 name:some/directory/goes/here
+t:0x2e8b0 CPU:00 THREAD  :THCREATE    pid:39 tid:1 
+t:0x2eaa4 CPU:00 THREAD  :THREADY     pid:39 tid:1 
+t:0x2ec98 CPU:00 THREAD  :THCREATE    pid:39 tid:2 
+t:0x2ee8c CPU:00 THREAD  :THREADY     pid:39 tid:2 
+t:0x2f080 CPU:00 THREAD  :THCREATE    pid:39 tid:3 
+t:0x2f274 CPU:00 THREAD  :THREADY     pid:39 tid:3 
+t:0x2f468 CPU:00 THREAD  :THCREATE    pid:39 tid:4 
+t:0x2f65c CPU:00 THREAD  :THREADY     pid:39 tid:4 
+t:0x2f850 CPU:00 THREAD  :THCREATE    pid:39 tid:5 
+t:0x2fa44 CPU:00 THREAD  :THREADY     pid:39 tid:5 
+t:0x2fa28 CPU:00 PROCESS :PROCCREATE_NAME ppid:39 pid:40 name:some/directory/goes/here
+t:0x2fc1c CPU:00 THREAD  :THCREATE    pid:40 tid:1 
+t:0x2fe10 CPU:00 THREAD  :THREADY     pid:40 tid:1 
+t:0x30004 CPU:00 THREAD  :THCREATE    pid:40 tid:2 
+t:0x301f8 CPU:00 THREAD  :THREADY     pid:40 tid:2 
+t:0x303ec CPU:00 THREAD  :THCREATE    pid:40 tid:3 
+t:0x305e0 CPU:00 THREAD  :THREADY     pid:40 tid:3 
+t:0x307d4 CPU:00 THREAD  :THCREATE    pid:40 tid:4 
+t:0x309c8 CPU:00 THREAD  :THREADY     pid:40 tid:4 
+t:0x30bbc CPU:00 THREAD  :THCREATE    pid:40 tid:5 
+t:0x30db0 CPU:00 THREAD  :THREADY     pid:40 tid:5 
+t:0x30d8a CPU:00 PROCESS :PROCCREATE_NAME ppid:40 pid:41 name:some/directory/goes/here
+t:0x30f7e CPU:00 THREAD  :THCREATE    pid:41 tid:1 
+t:0x31172 CPU:00 THREAD  :THREADY     pid:41 tid:1 
+t:0x31366 CPU:00 THREAD  :THCREATE    pid:41 tid:2 
+t:0x3155a CPU:00 THREAD  :THREADY     pid:41 tid:2 
+t:0x3174e CPU:00 THREAD  :THCREATE    pid:41 tid:3 
+t:0x31942 CPU:00 THREAD  :THREADY     pid:41 tid:3 
+t:0x31b36 CPU:00 THREAD  :THCREATE    pid:41 tid:4 
+t:0x31d2a CPU:00 THREAD  :THREADY     pid:41 tid:4 
+t:0x31f1e CPU:00 THREAD  :THCREATE    pid:41 tid:5 
+t:0x32112 CPU:00 THREAD  :THREADY     pid:41 tid:5 
+t:0x32113 CPU:00 PROCESS :PROCCREATE_NAME ppid:41 pid:42 name:some/directory/goes/here
+t:0x32307 CPU:00 THREAD  :THCREATE    pid:42 tid:1 
+t:0x324fb CPU:00 THREAD  :THREADY     pid:42 tid:1 
+t:0x326ef CPU:00 THREAD  :THCREATE    pid:42 tid:2 
+t:0x328e3 CPU:00 THREAD  :THREADY     pid:42 tid:2 
+t:0x32ad7 CPU:00 THREAD  :THCREATE    pid:42 tid:3 
+t:0x32ccb CPU:00 THREAD  :THREADY     pid:42 tid:3 
+t:0x32ebf CPU:00 THREAD  :THCREATE    pid:42 tid:4 
+t:0x330b3 CPU:00 THREAD  :THREADY     pid:42 tid:4 
+t:0x332a7 CPU:00 THREAD  :THCREATE    pid:42 tid:5 
+t:0x3349b CPU:00 THREAD  :THREADY     pid:42 tid:5 
+t:0x3349f CPU:00 PROCESS :PROCCREATE_NAME ppid:42 pid:43 name:some/directory/goes/here
+t:0x33693 CPU:00 THREAD  :THCREATE    pid:43 tid:1 
+t:0x33887 CPU:00 THREAD  :THREADY     pid:43 tid:1 
+t:0x33a7b CPU:00 THREAD  :THCREATE    pid:43 tid:2 
+t:0x33c6f CPU:00 THREAD  :THREADY     pid:43 tid:2 
+t:0x33e63 CPU:00 THREAD  :THCREATE    pid:43 tid:3 
+t:0x34057 CPU:00 THREAD  :THREADY     pid:43 tid:3 
+t:0x3424b CPU:00 THREAD  :THCREATE    pid:43 tid:4 
+t:0x3443f CPU:00 THREAD  :THREADY     pid:43 tid:4 
+t:0x34633 CPU:00 THREAD  :THCREATE    pid:43 tid:5 
+t:0x34827 CPU:00 THREAD  :THREADY     pid:43 tid:5 
+t:0x3483c CPU:00 PROCESS :PROCCREATE_NAME ppid:43 pid:44 name:some/directory/goes/here
+t:0x34a30 CPU:00 THREAD  :THCREATE    pid:44 tid:1 
+t:0x34c24 CPU:00 THREAD  :THREADY     pid:44 tid:1 
+t:0x34e18 CPU:00 THREAD  :THCREATE    pid:44 tid:2 
+t:0x3500c CPU:00 THREAD  :THREADY     pid:44 tid:2 
+t:0x35200 CPU:00 THREAD  :THCREATE    pid:44 tid:3 
+t:0x353f4 CPU:00 THREAD  :THREADY     pid:44 tid:3 
+t:0x355e8 CPU:00 THREAD  :THCREATE    pid:44 tid:4 
+t:0x357dc CPU:00 THREAD  :THREADY     pid:44 tid:4 
+t:0x359d0 CPU:00 THREAD  :THCREATE    pid:44 tid:5 
+t:0x35bc4 CPU:00 THREAD  :THREADY     pid:44 tid:5 
+t:0x35bd4 CPU:00 PROCESS :PROCCREATE_NAME ppid:44 pid:45 name:some/directory/goes/here
+t:0x35dc8 CPU:00 THREAD  :THCREATE    pid:45 tid:1 
+t:0x35fbc CPU:00 THREAD  :THREADY     pid:45 tid:1 
+t:0x361b0 CPU:00 THREAD  :THCREATE    pid:45 tid:2 
+t:0x363a4 CPU:00 THREAD  :THREADY     pid:45 tid:2 
+t:0x36598 CPU:00 THREAD  :THCREATE    pid:45 tid:3 
+t:0x3678c CPU:00 THREAD  :THREADY     pid:45 tid:3 
+t:0x36980 CPU:00 THREAD  :THCREATE    pid:45 tid:4 
+t:0x36b74 CPU:00 THREAD  :THREADY     pid:45 tid:4 
+t:0x36d68 CPU:00 THREAD  :THCREATE    pid:45 tid:5 
+t:0x36f5c CPU:00 THREAD  :THREADY     pid:45 tid:5 
+t:0x36f7e CPU:00 PROCESS :PROCCREATE_NAME ppid:45 pid:46 name:some/directory/goes/here
+t:0x37172 CPU:00 THREAD  :THCREATE    pid:46 tid:1 
+t:0x37366 CPU:00 THREAD  :THREADY     pid:46 tid:1 
+t:0x3755a CPU:00 THREAD  :THCREATE    pid:46 tid:2 
+t:0x3774e CPU:00 THREAD  :THREADY     pid:46 tid:2 
+t:0x37942 CPU:00 THREAD  :THCREATE    pid:46 tid:3 
+t:0x37b36 CPU:00 THREAD  :THREADY     pid:46 tid:3 
+t:0x37d2a CPU:00 THREAD  :THCREATE    pid:46 tid:4 
+t:0x37f1e CPU:00 THREAD  :THREADY     pid:46 tid:4 
+t:0x38112 CPU:00 THREAD  :THCREATE    pid:46 tid:5 
+t:0x38306 CPU:00 THREAD  :THREADY     pid:46 tid:5 
+t:0x38327 CPU:00 PROCESS :PROCCREATE_NAME ppid:46 pid:47 name:some/directory/goes/here
+t:0x3851b CPU:00 THREAD  :THCREATE    pid:47 tid:1 
+t:0x3870f CPU:00 THREAD  :THREADY     pid:47 tid:1 
+t:0x38903 CPU:00 THREAD  :THCREATE    pid:47 tid:2 
+t:0x38af7 CPU:00 THREAD  :THREADY     pid:47 tid:2 
+t:0x38ceb CPU:00 THREAD  :THCREATE    pid:47 tid:3 
+t:0x38edf CPU:00 THREAD  :THREADY     pid:47 tid:3 
+t:0x390d3 CPU:00 THREAD  :THCREATE    pid:47 tid:4 
+t:0x392c7 CPU:00 THREAD  :THREADY     pid:47 tid:4 
+t:0x394bb CPU:00 THREAD  :THCREATE    pid:47 tid:5 
+t:0x396af CPU:00 THREAD  :THREADY     pid:47 tid:5 
+t:0x396a5 CPU:00 PROCESS :PROCCREATE_NAME ppid:47 pid:48 name:some/directory/goes/here
+t:0x39899 CPU:00 THREAD  :THCREATE    pid:48 tid:1 
+t:0x39a8d CPU:00 THREAD  :THREADY     pid:48 tid:1 
+t:0x39c81 CPU:00 THREAD  :THCREATE    pid:48 tid:2 
+t:0x39e75 CPU:00 THREAD  :THREADY     pid:48 tid:2 
+t:0x3a069 CPU:00 THREAD  :THCREATE    pid:48 tid:3 
+t:0x3a25d CPU:00 THREAD  :THREADY     pid:48 tid:3 
+t:0x3a451 CPU:00 THREAD  :THCREATE    pid:48 tid:4 
+t:0x3a645 CPU:00 THREAD  :THREADY     pid:48 tid:4 
+t:0x3a839 CPU:00 THREAD  :THCREATE    pid:48 tid:5 
+t:0x3aa2d CPU:00 THREAD  :THREADY     pid:48 tid:5 
+t:0x3aa50 CPU:00 PROCESS :PROCCREATE_NAME ppid:48 pid:49 name:some/directory/goes/here
+t:0x3ac44 CPU:00 THREAD  :THCREATE    pid:49 tid:1 
+t:0x3ae38 CPU:00 THREAD  :THREADY     pid:49 tid:1 
+t:0x3b02c CPU:00 THREAD  :THCREATE    pid:49 tid:2 
+t:0x3b220 CPU:00 THREAD  :THREADY     pid:49 tid:2 
+t:0x3b414 CPU:00 THREAD  :THCREATE    pid:49 tid:3 
+t:0x3b608 CPU:00 THREAD  :THREADY     pid:49 tid:3 
+t:0x3b7fc CPU:00 THREAD  :THCREATE    pid:49 tid:4 
+t:0x3b9f0 CPU:00 THREAD  :THREADY     pid:49 tid:4 
+t:0x3bbe4 CPU:00 THREAD  :THCREATE    pid:49 tid:5 
+t:0x3bdd8 CPU:00 THREAD  :THREADY     pid:49 tid:5 
+t:0x3bdf8 CPU:00 PROCESS :PROCCREATE_NAME ppid:49 pid:50 name:some/directory/goes/here
+t:0x3bfec CPU:00 THREAD  :THCREATE    pid:50 tid:1 
+t:0x3c1e0 CPU:00 THREAD  :THREADY     pid:50 tid:1 
+t:0x3c3d4 CPU:00 THREAD  :THCREATE    pid:50 tid:2 
+t:0x3c5c8 CPU:00 THREAD  :THREADY     pid:50 tid:2 
+t:0x3c7bc CPU:00 THREAD  :THCREATE    pid:50 tid:3 
+t:0x3c9b0 CPU:00 THREAD  :THREADY     pid:50 tid:3 
+t:0x3cba4 CPU:00 THREAD  :THCREATE    pid:50 tid:4 
+t:0x3cd98 CPU:00 THREAD  :THREADY     pid:50 tid:4 
+t:0x3cf8c CPU:00 THREAD  :THCREATE    pid:50 tid:5 
+t:0x3d180 CPU:00 THREAD  :THREADY     pid:50 tid:5 
+t:0x3d158 CPU:00 PROCESS :PROCCREATE_NAME ppid:50 pid:51 name:some/directory/goes/here
+t:0x3d34c CPU:00 THREAD  :THCREATE    pid:51 tid:1 
+t:0x3d540 CPU:00 THREAD  :THREADY     pid:51 tid:1 
+t:0x3d734 CPU:00 THREAD  :THCREATE    pid:51 tid:2 
+t:0x3d928 CPU:00 THREAD  :THREADY     pid:51 tid:2 
+t:0x3db1c CPU:00 THREAD  :THCREATE    pid:51 tid:3 
+t:0x3dd10 CPU:00 THREAD  :THREADY     pid:51 tid:3 
+t:0x3df04 CPU:00 THREAD  :THCREATE    pid:51 tid:4 
+t:0x3e0f8 CPU:00 THREAD  :THREADY     pid:51 tid:4 
+t:0x3e2ec CPU:00 THREAD  :THCREATE    pid:51 tid:5 
+t:0x3e4e0 CPU:00 THREAD  :THREADY     pid:51 tid:5 
+t:0x3e4ed CPU:00 PROCESS :PROCCREATE_NAME ppid:51 pid:52 name:some/directory/goes/here
+t:0x3e6e1 CPU:00 THREAD  :THCREATE    pid:52 tid:1 
+t:0x3e8d5 CPU:00 THREAD  :THREADY     pid:52 tid:1 
+t:0x3eac9 CPU:00 THREAD  :THCREATE    pid:52 tid:2 
+t:0x3ecbd CPU:00 THREAD  :THREADY     pid:52 tid:2 
+t:0x3eeb1 CPU:00 THREAD  :THCREATE    pid:52 tid:3 
+t:0x3f0a5 CPU:00 THREAD  :THREADY     pid:52 tid:3 
+t:0x3f299 CPU:00 THREAD  :THCREATE    pid:52 tid:4 
+t:0x3f48d CPU:00 THREAD  :THREADY     pid:52 tid:4 
+t:0x3f681 CPU:00 THREAD  :THCREATE    pid:52 tid:5 
+t:0x3f875 CPU:00 THREAD  :THREADY     pid:52 tid:5 
+t:0x3f89c CPU:00 PROCESS :PROCCREATE_NAME ppid:52 pid:53 name:some/directory/goes/here
+t:0x3fa90 CPU:00 THREAD  :THCREATE    pid:53 tid:1 
+t:0x3fc84 CPU:00 THREAD  :THREADY     pid:53 tid:1 
+t:0x3fe78 CPU:00 THREAD  :THCREATE    pid:53 tid:2 
+t:0x4006c CPU:00 THREAD  :THREADY     pid:53 tid:2 
+t:0x40260 CPU:00 THREAD  :THCREATE    pid:53 tid:3 
+t:0x40454 CPU:00 THREAD  :THREADY     pid:53 tid:3 
+t:0x40648 CPU:00 THREAD  :THCREATE    pid:53 tid:4 
+t:0x4083c CPU:00 THREAD  :THREADY     pid:53 tid:4 
+t:0x40a30 CPU:00 THREAD  :THCREATE    pid:53 tid:5 
+t:0x40c24 CPU:00 THREAD  :THREADY     pid:53 tid:5 
+t:0x40c2e CPU:00 PROCESS :PROCCREATE_NAME ppid:53 pid:54 name:some/directory/goes/here
+t:0x40e22 CPU:00 THREAD  :THCREATE    pid:54 tid:1 
+t:0x41016 CPU:00 THREAD  :THREADY     pid:54 tid:1 
+t:0x4120a CPU:00 THREAD  :THCREATE    pid:54 tid:2 
+t:0x413fe CPU:00 THREAD  :THREADY     pid:54 tid:2 
+t:0x415f2 CPU:00 THREAD  :THCREATE    pid:54 tid:3 
+t:0x417e6 CPU:00 THREAD  :THREADY     pid:54 tid:3 
+t:0x419da CPU:00 THREAD  :THCREATE    pid:54 tid:4 
+t:0x41bce CPU:00 THREAD  :THREADY     pid:54 tid:4 
+t:0x41dc2 CPU:00 THREAD  :THCREATE    pid:54 tid:5 
+t:0x41fb6 CPU:00 THREAD  :THREADY     pid:54 tid:5 
+t:0x41fa1 CPU:00 PROCESS :PROCCREATE_NAME ppid:54 pid:55 name:some/directory/goes/here
+t:0x42195 CPU:00 THREAD  :THCREATE    pid:55 tid:1 
+t:0x42389 CPU:00 THREAD  :THREADY     pid:55 tid:1 
+t:0x4257d CPU:00 THREAD  :THCREATE    pid:55 tid:2 
+t:0x42771 CPU:00 THREAD  :THREADY     pid:55 tid:2 
+t:0x42965 CPU:00 THREAD  :THCREATE    pid:55 tid:3 
+t:0x42b59 CPU:00 THREAD  :THREADY     pid:55 tid:3 
+t:0x42d4d CPU:00 THREAD  :THCREATE    pid:55 tid:4 
+t:0x42f41 CPU:00 THREAD  :THREADY     pid:55 tid:4 
+t:0x43135 CPU:00 THREAD  :THCREATE    pid:55 tid:5 
+t:0x43329 CPU:00 THREAD  :THREADY     pid:55 tid:5 
+t:0x4333c CPU:00 PROCESS :PROCCREATE_NAME ppid:55 pid:56 name:some/directory/goes/here
+t:0x43530 CPU:00 THREAD  :THCREATE    pid:56 tid:1 
+t:0x43724 CPU:00 THREAD  :THREADY     pid:56 tid:1 
+t:0x43918 CPU:00 THREAD  :THCREATE    pid:56 tid:2 
+t:0x43b0c CPU:00 THREAD  :THREADY     pid:56 tid:2 
+t:0x43d00 CPU:00 THREAD  :THCREATE    pid:56 tid:3 
+t:0x43ef4 CPU:00 THREAD  :THREADY     pid:56 tid:3 
+t:0x440e8 CPU:00 THREAD  :THCREATE    pid:56 tid:4 
+t:0x442dc CPU:00 THREAD  :THREADY     pid:56 tid:4 
+t:0x444d0 CPU:00 THREAD  :THCREATE    pid:56 tid:5 
+t:0x446c4 CPU:00 THREAD  :THREADY     pid:56 tid:5 
+t:0x446b8 CPU:00 PROCESS :PROCCREATE_NAME ppid:56 pid:57 name:some/directory/goes/here
+t:0x448ac CPU:00 THREAD  :THCREATE    pid:57 tid:1 
+t:0x44aa0 CPU:00 THREAD  :THREADY     pid:57 tid:1 
+t:0x44c94 CPU:00 THREAD  :THCREATE    pid:57 tid:2 
+t:0x44e88 CPU:00 THREAD  :THREADY     pid:57 tid:2 
+t:0x4507c CPU:00 THREAD  :THCREATE    pid:57 tid:3 
+t:0x45270 CPU:00 THREAD  :THREADY     pid:57 tid:3 
+t:0x45464 CPU:00 THREAD  :THCREATE    pid:57 tid:4 
+t:0x45658 CPU:00 THREAD  :THREADY     pid:57 tid:4 
+t:0x4584c CPU:00 THREAD  :THCREATE    pid:57 tid:5 
+t:0x45a40 CPU:00 THREAD  :THREADY     pid:57 tid:5 
+t:0x45a3d CPU:00 PROCESS :PROCCREATE_NAME ppid:57 pid:58 name:some/directory/goes/here
+t:0x45c31 CPU:00 THREAD  :THCREATE    pid:58 tid:1 
+t:0x45e25 CPU:00 THREAD  :THREADY     pid:58 tid:1 
+t:0x46019 CPU:00 THREAD  :THCREATE    pid:58 tid:2 
+t:0x4620d CPU:00 THREAD  :THREADY     pid:58 tid:2 
+t:0x46401 CPU:00 THREAD  :THCREATE    pid:58 tid:3 
+t:0x465f5 CPU:00 THREAD  :THREADY     pid:58 tid:3 
+t:0x467e9 CPU:00 THREAD  :THCREATE    pid:58 tid:4 
+t:0x469dd CPU:00 THREAD  :THREADY     pid:58 tid:4 
+t:0x46bd1 CPU:00 THREAD  :THCREATE    pid:58 tid:5 
+t:0x46dc5 CPU:00 THREAD  :THREADY     pid:58 tid:5 
+t:0x46db8 CPU:00 PROCESS :PROCCREATE_NAME ppid:58 pid:59 name:some/directory/goes/here
+t:0x46fac CPU:00 THREAD  :THCREATE    pid:59 tid:1 
+t:0x471a0 CPU:00 THREAD  :THREADY     pid:59 tid:1 
+t:0x47394 CPU:00 THREAD  :THCREATE    pid:59 tid:2 
+t:0x47588 CPU:00 THREAD  :THREADY     pid:59 tid:2 
+t:0x4777c CPU:00 THREAD  :THCREATE    pid:59 tid:3 
+t:0x47970 CPU:00 THREAD  :THREADY     pid:59 tid:3 
+t:0x47b64 CPU:00 THREAD  :THCREATE    pid:59 tid:4 
+t:0x47d58 CPU:00 THREAD  :THREADY     pid:59 tid:4 
+t:0x47f4c CPU:00 THREAD  :THCREATE    pid:59 tid:5 
+t:0x48140 CPU:00 THREAD  :THREADY     pid:59 tid:5 
+t:0x48154 CPU:00 PROCESS :PROCCREATE_NAME ppid:59 pid:60 name:some/directory/goes/here
+t:0x48348 CPU:00 THREAD  :THCREATE    pid:60 tid:1 
+t:0x4853c CPU:00 THREAD  :THREADY     pid:60 tid:1 
+t:0x48730 CPU:00 THREAD  :THCREATE    pid:60 tid:2 
+t:0x48924 CPU:00 THREAD  :THREADY     pid:60 tid:2 
+t:0x48b18 CPU:00 THREAD  :THCREATE    pid:60 tid:3 
+t:0x48d0c CPU:00 THREAD  :THREADY     pid:60 tid:3 
+t:0x48f00 CPU:00 THREAD  :THCREATE    pid:60 tid:4 
+t:0x490f4 CPU:00 THREAD  :THREADY     pid:60 tid:4 
+t:0x492e8 CPU:00 THREAD  :THCREATE    pid:60 tid:5 
+t:0x494dc CPU:00 THREAD  :THREADY     pid:60 tid:5 
+t:0x494ff CPU:00 PROCESS :PROCCREATE_NAME ppid:60 pid:61 name:some/directory/goes/here
+t:0x496f3 CPU:00 THREAD  :THCREATE    pid:61 tid:1 
+t:0x498e7 CPU:00 THREAD  :THREADY     pid:61 tid:1 
+t:0x49adb CPU:00 THREAD  :THCREATE    pid:61 tid:2 
+t:0x49ccf CPU:00 THREAD  :THREADY     pid:61 tid:2 
+t:0x49ec3 CPU:00 THREAD  :THCREATE    pid:61 tid:3 
+t:0x4a0b7 CPU:00 THREAD  :THREADY     pid:61 tid:3 
+t:0x4a2ab CPU:00 THREAD  :THCREATE    pid:61 tid:4 
+t:0x4a49f CPU:00 THREAD  :THREADY     pid:61 tid:4 
+t:0x4a693 CPU:00 THREAD  :THCREATE    pid:61 tid:5 
+t:0x4a887 CPU:00 THREAD  :THREADY     pid:61 tid:5 
+t:0x4a89e CPU:00 PROCESS :PROCCREATE_NAME ppid:61 pid:62 name:some/directory/goes/here
+t:0x4aa92 CPU:00 THREAD  :THCREATE    pid:62 tid:1 
+t:0x4ac86 CPU:00 THREAD  :THREADY     pid:62 tid:1 
+t:0x4ae7a CPU:00 THREAD  :THCREATE    pid:62 tid:2 
+t:0x4b06e CPU:00 THREAD  :THREADY     pid:62 tid:2 
+t:0x4b262 CPU:00 THREAD  :THCREATE    pid:62 tid:3 
+t:0x4b456 CPU:00 THREAD  :THREADY     pid:62 tid:3 
+t:0x4b64a CPU:00 THREAD  :THCREATE    pid:62 tid:4 
+t:0x4b83e CPU:00 THREAD  :THREADY     pid:62 tid:4 
+t:0x4ba32 CPU:00 THREAD  :THCREATE    pid:62 tid:5 
+t:0x4bc26 CPU:00 THREAD  :THREADY     pid:62 tid:5 
+t:0x4bc08 CPU:00 PROCESS :PROCCREATE_NAME ppid:62 pid:63 name:some/directory/goes/here
+t:0x4bdfc CPU:00 THREAD  :THCREATE    pid:63 tid:1 
+t:0x4bff0 CPU:00 THREAD  :THREADY     pid:63 tid:1 
+t:0x4c1e4 CPU:00 THREAD  :THCREATE    pid:63 tid:2 
+t:0x4c3d8 CPU:00 THREAD  :THREADY     pid:63 tid:2 
+t:0x4c5cc CPU:00 THREAD  :THCREATE    pid:63 tid:3 
+t:0x4c7c0 CPU:00 THREAD  :THREADY     pid:63 tid:3 
+t:0x4c9b4 CPU:00 THREAD  :THCREATE    pid:63 tid:4 
+t:0x4cba8 CPU:00 THREAD  :THREADY     pid:63 tid:4 
+t:0x4cd9c CPU:00 THREAD  :THCREATE    pid:63 tid:5 
+t:0x4cf90 CPU:00 THREAD  :THREADY     pid:63 tid:5 
+t:0x4cf85 CPU:00 PROCESS :PROCCREATE_NAME ppid:63 pid:64 name:some/directory/goes/here
+t:0x4d179 CPU:00 THREAD  :THCREATE    pid:64 tid:1 
+t:0x4d36d CPU:00 THREAD  :THREADY     pid:64 tid:1 
+t:0x4d561 CPU:00 THREAD  :THCREATE    pid:64 tid:2 
+t:0x4d755 CPU:00 THREAD  :THREADY     pid:64 tid:2 
+t:0x4d949 CPU:00 THREAD  :THCREATE    pid:64 tid:3 
+t:0x4db3d CPU:00 THREAD  :THREADY     pid:64 tid:3 
+t:0x4dd31 CPU:00 THREAD  :THCREATE    pid:64 tid:4 
+t:0x4df25 CPU:00 THREAD  :THREADY     pid:64 tid:4 
+t:0x4e119 CPU:00 THREAD  :THCREATE    pid:64 tid:5 
+t:0x4e30d CPU:00 THREAD  :THREADY     pid:64 tid:5 
+t:0x4e31d CPU:00 PROCESS :PROCCREATE_NAME ppid:64 pid:65 name:some/directory/goes/here
+t:0x4e511 CPU:00 THREAD  :THCREATE    pid:65 tid:1 
+t:0x4e705 CPU:00 THREAD  :THREADY     pid:65 tid:1 
+t:0x4e8f9 CPU:00 THREAD  :THCREATE    pid:65 tid:2 
+t:0x4eaed CPU:00 THREAD  :THREADY     pid:65 tid:2 
+t:0x4ece1 CPU:00 THREAD  :THCREATE    pid:65 tid:3 
+t:0x4eed5 CPU:00 THREAD  :THREADY     pid:65 tid:3 
+t:0x4f0c9 CPU:00 THREAD  :THCREATE    pid:65 tid:4 
+t:0x4f2bd CPU:00 THREAD  :THREADY     pid:65 tid:4 
+t:0x4f4b1 CPU:00 THREAD  :THCREATE    pid:65 tid:5 
+t:0x4f6a5 CPU:00 THREAD  :THREADY     pid:65 tid:5 
+t:0x4f6aa CPU:00 PROCESS :PROCCREATE_NAME ppid:65 pid:66 name:some/directory/goes/here
+t:0x4f89e CPU:00 THREAD  :THCREATE    pid:66 tid:1 
+t:0x4fa92 CPU:00 THREAD  :THREADY     pid:66 tid:1 
+t:0x4fc86 CPU:00 THREAD  :THCREATE    pid:66 tid:2 
+t:0x4fe7a CPU:00 THREAD  :THREADY     pid:66 tid:2 
+t:0x5006e CPU:00 THREAD  :THCREATE    pid:66 tid:3 
+t:0x50262 CPU:00 THREAD  :THREADY     pid:66 tid:3 
+t:0x50456 CPU:00 THREAD  :THCREATE    pid:66 tid:4 
+t:0x5064a CPU:00 THREAD  :THREADY     pid:66 tid:4 
+t:0x5083e CPU:00 THREAD  :THCREATE    pid:66 tid:5 
+t:0x50a32 CPU:00 THREAD  :THREADY     pid:66 tid:5 
+t:0x50a0a CPU:00 PROCESS :PROCCREATE_NAME ppid:66 pid:67 name:some/directory/goes/here
+t:0x50bfe CPU:00 THREAD  :THCREATE    pid:67 tid:1 
+t:0x50df2 CPU:00 THREAD  :THREADY     pid:67 tid:1 
+t:0x50fe6 CPU:00 THREAD  :THCREATE    pid:67 tid:2 
+t:0x511da CPU:00 THREAD  :THREADY     pid:67 tid:2 
+t:0x513ce CPU:00 THREAD  :THCREATE    pid:67 tid:3 
+t:0x515c2 CPU:00 THREAD  :THREADY     pid:67 tid:3 
+t:0x517b6 CPU:00 THREAD  :THCREATE    pid:67 tid:4 
+t:0x519aa CPU:00 THREAD  :THREADY     pid:67 tid:4 
+t:0x51b9e CPU:00 THREAD  :THCREATE    pid:67 tid:5 
+t:0x51d92 CPU:00 THREAD  :THREADY     pid:67 tid:5 
+t:0x51d7b CPU:00 PROCESS :PROCCREATE_NAME ppid:67 pid:68 name:some/directory/goes/here
+t:0x51f6f CPU:00 THREAD  :THCREATE    pid:68 tid:1 
+t:0x52163 CPU:00 THREAD  :THREADY     pid:68 tid:1 
+t:0x52357 CPU:00 THREAD  :THCREATE    pid:68 tid:2 
+t:0x5254b CPU:00 THREAD  :THREADY     pid:68 tid:2 
+t:0x5273f CPU:00 THREAD  :THCREATE    pid:68 tid:3 
+t:0x52933 CPU:00 THREAD  :THREADY     pid:68 tid:3 
+t:0x52b27 CPU:00 THREAD  :THCREATE    pid:68 tid:4 
+t:0x52d1b CPU:00 THREAD  :THREADY     pid:68 tid:4 
+t:0x52f0f CPU:00 THREAD  :THCREATE    pid:68 tid:5 
+t:0x53103 CPU:00 THREAD  :THREADY     pid:68 tid:5 
+t:0x530f1 CPU:00 PROCESS :PROCCREATE_NAME ppid:68 pid:69 name:some/directory/goes/here
+t:0x532e5 CPU:00 THREAD  :THCREATE    pid:69 tid:1 
+t:0x534d9 CPU:00 THREAD  :THREADY     pid:69 tid:1 
+t:0x536cd CPU:00 THREAD  :THCREATE    pid:69 tid:2 
+t:0x538c1 CPU:00 THREAD  :THREADY     pid:69 tid:2 
+t:0x53ab5 CPU:00 THREAD  :THCREATE    pid:69 tid:3 
+t:0x53ca9 CPU:00 THREAD  :THREADY     pid:69 tid:3 
+t:0x53e9d CPU:00 THREAD  :THCREATE    pid:69 tid:4 
+t:0x54091 CPU:00 THREAD  :THREADY     pid:69 tid:4 
+t:0x54285 CPU:00 THREAD  :THCREATE    pid:69 tid:5 
+t:0x54479 CPU:00 THREAD  :THREADY     pid:69 tid:5 
+t:0x54453 CPU:00 PROCESS :PROCCREATE_NAME ppid:69 pid:70 name:some/directory/goes/here
+t:0x54647 CPU:00 THREAD  :THCREATE    pid:70 tid:1 
+t:0x5483b CPU:00 THREAD  :THREADY     pid:70 tid:1 
+t:0x54a2f CPU:00 THREAD  :THCREATE    pid:70 tid:2 
+t:0x54c23 CPU:00 THREAD  :THREADY     pid:70 tid:2 
+t:0x54e17 CPU:00 THREAD  :THCREATE    pid:70 tid:3 
+t:0x5500b CPU:00 THREAD  :THREADY     pid:70 tid:3 
+t:0x551ff CPU:00 THREAD  :THCREATE    pid:70 tid:4 
+t:0x553f3 CPU:00 THREAD  :THREADY     pid:70 tid:4 
+t:0x555e7 CPU:00 THREAD  :THCREATE    pid:70 tid:5 
+t:0x557db CPU:00 THREAD  :THREADY     pid:70 tid:5 
+t:0x557f6 CPU:00 PROCESS :PROCCREATE_NAME ppid:70 pid:71 name:some/directory/goes/here
+t:0x559ea CPU:00 THREAD  :THCREATE    pid:71 tid:1 
+t:0x55bde CPU:00 THREAD  :THREADY     pid:71 tid:1 
+t:0x55dd2 CPU:00 THREAD  :THCREATE    pid:71 tid:2 
+t:0x55fc6 CPU:00 THREAD  :THREADY     pid:71 tid:2 
+t:0x561ba CPU:00 THREAD  :THCREATE    pid:71 tid:3 
+t:0x563ae CPU:00 THREAD  :THREADY     pid:71 tid:3 
+t:0x565a2 CPU:00 THREAD  :THCREATE    pid:71 tid:4 
+t:0x56796 CPU:00 THREAD  :THREADY     pid:71 tid:4 
+t:0x5698a CPU:00 THREAD  :THCREATE    pid:71 tid:5 
+t:0x56b7e CPU:00 THREAD  :THREADY     pid:71 tid:5 
+t:0x56b7f CPU:00 PROCESS :PROCCREATE_NAME ppid:71 pid:72 name:some/directory/goes/here
+t:0x56d73 CPU:00 THREAD  :THCREATE    pid:72 tid:1 
+t:0x56f67 CPU:00 THREAD  :THREADY     pid:72 tid:1 
+t:0x5715b CPU:00 THREAD  :THCREATE    pid:72 tid:2 
+t:0x5734f CPU:00 THREAD  :THREADY     pid:72 tid:2 
+t:0x57543 CPU:00 THREAD  :THCREATE    pid:72 tid:3 
+t:0x57737 CPU:00 THREAD  :THREADY     pid:72 tid:3 
+t:0x5792b CPU:00 THREAD  :THCREATE    pid:72 tid:4 
+t:0x57b1f CPU:00 THREAD  :THREADY     pid:72 tid:4 
+t:0x57d13 CPU:00 THREAD  :THCREATE    pid:72 tid:5 
+t:0x57f07 CPU:00 THREAD  :THREADY     pid:72 tid:5 
+t:0x57f0a CPU:00 PROCESS :PROCCREATE_NAME ppid:72 pid:73 name:some/directory/goes/here
+t:0x580fe CPU:00 THREAD  :THCREATE    pid:73 tid:1 
+t:0x582f2 CPU:00 THREAD  :THREADY     pid:73 tid:1 
+t:0x584e6 CPU:00 THREAD  :THCREATE    pid:73 tid:2 
+t:0x586da CPU:00 THREAD  :THREADY     pid:73 tid:2 
+t:0x588ce CPU:00 THREAD  :THCREATE    pid:73 tid:3 
+t:0x58ac2 CPU:00 THREAD  :THREADY     pid:73 tid:3 
+t:0x58cb6 CPU:00 THREAD  :THCREATE    pid:73 tid:4 
+t:0x58eaa CPU:00 THREAD  :THREADY     pid:73 tid:4 
+t:0x5909e CPU:00 THREAD  :THCREATE    pid:73 tid:5 
+t:0x59292 CPU:00 THREAD  :THREADY     pid:73 tid:5 
+t:0x5927d CPU:00 PROCESS :PROCCREATE_NAME ppid:73 pid:74 name:some/directory/goes/here
+t:0x59471 CPU:00 THREAD  :THCREATE    pid:74 tid:1 
+t:0x59665 CPU:00 THREAD  :THREADY     pid:74 tid:1 
+t:0x59859 CPU:00 THREAD  :THCREATE    pid:74 tid:2 
+t:0x59a4d CPU:00 THREAD  :THREADY     pid:74 tid:2 
+t:0x59c41 CPU:00 THREAD  :THCREATE    pid:74 tid:3 
+t:0x59e35 CPU:00 THREAD  :THREADY     pid:74 tid:3 
+t:0x5a029 CPU:00 THREAD  :THCREATE    pid:74 tid:4 
+t:0x5a21d CPU:00 THREAD  :THREADY     pid:74 tid:4 
+t:0x5a411 CPU:00 THREAD  :THCREATE    pid:74 tid:5 
+t:0x5a605 CPU:00 THREAD  :THREADY     pid:74 tid:5 
+t:0x5a61c CPU:00 PROCESS :PROCCREATE_NAME ppid:74 pid:75 name:some/directory/goes/here
+t:0x5a810 CPU:00 THREAD  :THCREATE    pid:75 tid:1 
+t:0x5aa04 CPU:00 THREAD  :THREADY     pid:75 tid:1 
+t:0x5abf8 CPU:00 THREAD  :THCREATE    pid:75 tid:2 
+t:0x5adec CPU:00 THREAD  :THREADY     pid:75 tid:2 
+t:0x5afe0 CPU:00 THREAD  :THCREATE    pid:75 tid:3 
+t:0x5b1d4 CPU:00 THREAD  :THREADY     pid:75 tid:3 
+t:0x5b3c8 CPU:00 THREAD  :THCREATE    pid:75 tid:4 
+t:0x5b5bc CPU:00 THREAD  :THREADY     pid:75 tid:4 
+t:0x5b7b0 CPU:00 THREAD  :THCREATE    pid:75 tid:5 
+t:0x5b9a4 CPU:00 THREAD  :THREADY     pid:75 tid:5 
+t:0x5b9c5 CPU:00 PROCESS :PROCCREATE_NAME ppid:75 pid:76 name:some/directory/goes/here
+t:0x5bbb9 CPU:00 THREAD  :THCREATE    pid:76 tid:1 
+t:0x5bdad CPU:00 THREAD  :THREADY     pid:76 tid:1 
+t:0x5bfa1 CPU:00 THREAD  :THCREATE    pid:76 tid:2 
+t:0x5c195 CPU:00 THREAD  :THREADY     pid:76 tid:2 
+t:0x5c389 CPU:00 THREAD  :THCREATE    pid:76 tid:3 
+t:0x5c57d CPU:00 THREAD  :THREADY     pid:76 tid:3 
+t:0x5c771 CPU:00 THREAD  :THCREATE    pid:76 tid:4 
+t:0x5c965 CPU:00 THREAD  :THREADY     pid:76 tid:4 
+t:0x5cb59 CPU:00 THREAD  :THCREATE    pid:76 tid:5 
+t:0x5cd4d CPU:00 THREAD  :THREADY     pid:76 tid:5 
+t:0x5cd4e CPU:00 PROCESS :PROCCREATE_NAME ppid:76 pid:77 name:some/directory/goes/here
+t:0x5cf42 CPU:00 THREAD  :THCREATE    pid:77 tid:1 
+t:0x5d136 CPU:00 THREAD  :THREADY     pid:77 tid:1 
+t:0x5d32a CPU:00 THREAD  :THCREATE    pid:77 tid:2 
+t:0x5d51e CPU:00 THREAD  :THREADY     pid:77 tid:2 
+t:0x5d712 CPU:00 THREAD  :THCREATE    pid:77 tid:3 
+t:0x5d906 CPU:00 THREAD  :THREADY     pid:77 tid:3 
+t:0x5dafa CPU:00 THREAD  :THCREATE    pid:77 tid:4 
+t:0x5dcee CPU:00 THREAD  :THREADY     pid:77 tid:4 
+t:0x5dee2 CPU:00 THREAD  :THCREATE    pid:77 tid:5 
+t:0x5e0d6 CPU:00 THREAD  :THREADY     pid:77 tid:5 
+t:0x5e0d3 CPU:00 PROCESS :PROCCREATE_NAME ppid:77 pid:78 name:some/directory/goes/here
+t:0x5e2c7 CPU:00 THREAD  :THCREATE    pid:78 tid:1 
+t:0x5e4bb CPU:00 THREAD  :THREADY     pid:78 tid:1 
+t:0x5e6af CPU:00 THREAD  :THCREATE    pid:78 tid:2 
+t:0x5e8a3 CPU:00 THREAD  :THREADY     pid:78 tid:2 
+t:0x5ea97 CPU:00 THREAD  :THCREATE    pid:78 tid:3 
+t:0x5ec8b CPU:00 THREAD  :THREADY     pid:78 tid:3 
+t:0x5ee7f CPU:00 THREAD  :THCREATE    pid:78 tid:4 
+t:0x5f073 CPU:00 THREAD  :THREADY     pid:78 tid:4 
+t:0x5f267 CPU:00 THREAD  :THCREATE    pid:78 tid:5 
+t:0x5f45b CPU:00 THREAD  :THREADY     pid:78 tid:5 
+t:0x5f457 CPU:00 PROCESS :PROCCREATE_NAME ppid:78 pid:79 name:some/directory/goes/here
+t:0x5f64b CPU:00 THREAD  :THCREATE    pid:79 tid:1 
+t:0x5f83f CPU:00 THREAD  :THREADY     pid:79 tid:1 
+t:0x5fa33 CPU:00 THREAD  :THCREATE    pid:79 tid:2 
+t:0x5fc27 CPU:00 THREAD  :THREADY     pid:79 tid:2 
+t:0x5fe1b CPU:00 THREAD  :THCREATE    pid:79 tid:3 
+t:0x6000f CPU:00 THREAD  :THREADY     pid:79 tid:3 
+t:0x60203 CPU:00 THREAD  :THCREATE    pid:79 tid:4 
+t:0x603f7 CPU:00 THREAD  :THREADY     pid:79 tid:4 
+t:0x605eb CPU:00 THREAD  :THCREATE    pid:79 tid:5 
+t:0x607df CPU:00 THREAD  :THREADY     pid:79 tid:5 
+t:0x607e4 CPU:00 PROCESS :PROCCREATE_NAME ppid:79 pid:80 name:some/directory/goes/here
+t:0x609d8 CPU:00 THREAD  :THCREATE    pid:80 tid:1 
+t:0x60bcc CPU:00 THREAD  :THREADY     pid:80 tid:1 
+t:0x60dc0 CPU:00 THREAD  :THCREATE    pid:80 tid:2 
+t:0x60fb4 CPU:00 THREAD  :THREADY     pid:80 tid:2 
+t:0x611a8 CPU:00 THREAD  :THCREATE    pid:80 tid:3 
+t:0x6139c CPU:00 THREAD  :THREADY     pid:80 tid:3 
+t:0x61590 CPU:00 THREAD  :THCREATE    pid:80 tid:4 
+t:0x61784 CPU:00 THREAD  :THREADY     pid:80 tid:4 
+t:0x61978 CPU:00 THREAD  :THCREATE    pid:80 tid:5 
+t:0x61b6c CPU:00 THREAD  :THREADY     pid:80 tid:5 
+t:0x61b82 CPU:00 PROCESS :PROCCREATE_NAME ppid:80 pid:81 name:some/directory/goes/here
+t:0x61d76 CPU:00 THREAD  :THCREATE    pid:81 tid:1 
+t:0x61f6a CPU:00 THREAD  :THREADY     pid:81 tid:1 
+t:0x6215e CPU:00 THREAD  :THCREATE    pid:81 tid:2 
+t:0x62352 CPU:00 THREAD  :THREADY     pid:81 tid:2 
+t:0x62546 CPU:00 THREAD  :THCREATE    pid:81 tid:3 
+t:0x6273a CPU:00 THREAD  :THREADY     pid:81 tid:3 
+t:0x6292e CPU:00 THREAD  :THCREATE    pid:81 tid:4 
+t:0x62b22 CPU:00 THREAD  :THREADY     pid:81 tid:4 
+t:0x62d16 CPU:00 THREAD  :THCREATE    pid:81 tid:5 
+t:0x62f0a CPU:00 THREAD  :THREADY     pid:81 tid:5 
+t:0x62ef7 CPU:00 PROCESS :PROCCREATE_NAME ppid:81 pid:82 name:some/directory/goes/here
+t:0x630eb CPU:00 THREAD  :THCREATE    pid:82 tid:1 
+t:0x632df CPU:00 THREAD  :THREADY     pid:82 tid:1 
+t:0x634d3 CPU:00 THREAD  :THCREATE    pid:82 tid:2 
+t:0x636c7 CPU:00 THREAD  :THREADY     pid:82 tid:2 
+t:0x638bb CPU:00 THREAD  :THCREATE    pid:82 tid:3 
+t:0x63aaf CPU:00 THREAD  :THREADY     pid:82 tid:3 
+t:0x63ca3 CPU:00 THREAD  :THCREATE    pid:82 tid:4 
+t:0x63e97 CPU:00 THREAD  :THREADY     pid:82 tid:4 
+t:0x6408b CPU:00 THREAD  :THCREATE    pid:82 tid:5 
+t:0x6427f CPU:00 THREAD  :THREADY     pid:82 tid:5 
+t:0x6427f CPU:00 PROCESS :PROCCREATE_NAME ppid:82 pid:83 name:some/directory/goes/here
+t:0x64473 CPU:00 THREAD  :THCREATE    pid:83 tid:1 
+t:0x64667 CPU:00 THREAD  :THREADY     pid:83 tid:1 
+t:0x6485b CPU:00 THREAD  :THCREATE    pid:83 tid:2 
+t:0x64a4f CPU:00 THREAD  :THREADY     pid:83 tid:2 
+t:0x64c43 CPU:00 THREAD  :THCREATE    pid:83 tid:3 
+t:0x64e37 CPU:00 THREAD  :THREADY     pid:83 tid:3 
+t:0x6502b CPU:00 THREAD  :THCREATE    pid:83 tid:4 
+t:0x6521f CPU:00 THREAD  :THREADY     pid:83 tid:4 
+t:0x65413 CPU:00 THREAD  :THCREATE    pid:83 tid:5 
+t:0x65607 CPU:00 THREAD  :THREADY     pid:83 tid:5 
+t:0x655ea CPU:00 PROCESS :PROCCREATE_NAME ppid:83 pid:84 name:some/directory/goes/here
+t:0x657de CPU:00 THREAD  :THCREATE    pid:84 tid:1 
+t:0x659d2 CPU:00 THREAD  :THREADY     pid:84 tid:1 
+t:0x65bc6 CPU:00 THREAD  :THCREATE    pid:84 tid:2 
+t:0x65dba CPU:00 THREAD  :THREADY     pid:84 tid:2 
+t:0x65fae CPU:00 THREAD  :THCREATE    pid:84 tid:3 
+t:0x661a2 CPU:00 THREAD  :THREADY     pid:84 tid:3 
+t:0x66396 CPU:00 THREAD  :THCREATE    pid:84 tid:4 
+t:0x6658a CPU:00 THREAD  :THREADY     pid:84 tid:4 
+t:0x6677e CPU:00 THREAD  :THCREATE    pid:84 tid:5 
+t:0x66972 CPU:00 THREAD  :THREADY     pid:84 tid:5 
+t:0x6698d CPU:00 PROCESS :PROCCREATE_NAME ppid:84 pid:85 name:some/directory/goes/here
+t:0x66b81 CPU:00 THREAD  :THCREATE    pid:85 tid:1 
+t:0x66d75 CPU:00 THREAD  :THREADY     pid:85 tid:1 
+t:0x66f69 CPU:00 THREAD  :THCREATE    pid:85 tid:2 
+t:0x6715d CPU:00 THREAD  :THREADY     pid:85 tid:2 
+t:0x67351 CPU:00 THREAD  :THCREATE    pid:85 tid:3 
+t:0x67545 CPU:00 THREAD  :THREADY     pid:85 tid:3 
+t:0x67739 CPU:00 THREAD  :THCREATE    pid:85 tid:4 
+t:0x6792d CPU:00 THREAD  :THREADY     pid:85 tid:4 
+t:0x67b21 CPU:00 THREAD  :THCREATE    pid:85 tid:5 
+t:0x67d15 CPU:00 THREAD  :THREADY     pid:85 tid:5 
+t:0x67d2d CPU:00 PROCESS :PROCCREATE_NAME ppid:85 pid:86 name:some/directory/goes/here
+t:0x67f21 CPU:00 THREAD  :THCREATE    pid:86 tid:1 
+t:0x68115 CPU:00 THREAD  :THREADY     pid:86 tid:1 
+t:0x68309 CPU:00 THREAD  :THCREATE    pid:86 tid:2 
+t:0x684fd CPU:00 THREAD  :THREADY     pid:86 tid:2 
+t:0x686f1 CPU:00 THREAD  :THCREATE    pid:86 tid:3 
+t:0x688e5 CPU:00 THREAD  :THREADY     pid:86 tid:3 
+t:0x68ad9 CPU:00 THREAD  :THCREATE    pid:86 tid:4 
+t:0x68ccd CPU:00 THREAD  :THREADY     pid:86 tid:4 
+t:0x68ec1 CPU:00 THREAD  :THCREATE    pid:86 tid:5 
+t:0x690b5 CPU:00 THREAD  :THREADY     pid:86 tid:5 
+t:0x690c3 CPU:00 PROCESS :PROCCREATE_NAME ppid:86 pid:87 name:some/directory/goes/here
+t:0x692b7 CPU:00 THREAD  :THCREATE    pid:87 tid:1 
+t:0x694ab CPU:00 THREAD  :THREADY     pid:87 tid:1 
+t:0x6969f CPU:00 THREAD  :THCREATE    pid:87 tid:2 
+t:0x69893 CPU:00 THREAD  :THREADY     pid:87 tid:2 
+t:0x69a87 CPU:00 THREAD  :THCREATE    pid:87 tid:3 
+t:0x69c7b CPU:00 THREAD  :THREADY     pid:87 tid:3 
+t:0x69e6f CPU:00 THREAD  :THCREATE    pid:87 tid:4 
+t:0x6a063 CPU:00 THREAD  :THREADY     pid:87 tid:4 
+t:0x6a257 CPU:00 THREAD  :THCREATE    pid:87 tid:5 
+t:0x6a44b CPU:00 THREAD  :THREADY     pid:87 tid:5 
+t:0x6a456 CPU:00 PROCESS :PROCCREATE_NAME ppid:87 pid:88 name:some/directory/goes/here
+t:0x6a64a CPU:00 THREAD  :THCREATE    pid:88 tid:1 
+t:0x6a83e CPU:00 THREAD  :THREADY     pid:88 tid:1 
+t:0x6aa32 CPU:00 THREAD  :THCREATE    pid:88 tid:2 
+t:0x6ac26 CPU:00 THREAD  :THREADY     pid:88 tid:2 
+t:0x6ae1a CPU:00 THREAD  :THCREATE    pid:88 tid:3 
+t:0x6b00e CPU:00 THREAD  :THREADY     pid:88 tid:3 
+t:0x6b202 CPU:00 THREAD  :THCREATE    pid:88 tid:4 
+t:0x6b3f6 CPU:00 THREAD  :THREADY     pid:88 tid:4 
+t:0x6b5ea CPU:00 THREAD  :THCREATE    pid:88 tid:5 
+t:0x6b7de CPU:00 THREAD  :THREADY     pid:88 tid:5 
+t:0x6b7ee CPU:00 PROCESS :PROCCREATE_NAME ppid:88 pid:89 name:some/directory/goes/here
+t:0x6b9e2 CPU:00 THREAD  :THCREATE    pid:89 tid:1 
+t:0x6bbd6 CPU:00 THREAD  :THREADY     pid:89 tid:1 
+t:0x6bdca CPU:00 THREAD  :THCREATE    pid:89 tid:2 
+t:0x6bfbe CPU:00 THREAD  :THREADY     pid:89 tid:2 
+t:0x6c1b2 CPU:00 THREAD  :THCREATE    pid:89 tid:3 
+t:0x6c3a6 CPU:00 THREAD  :THREADY     pid:89 tid:3 
+t:0x6c59a CPU:00 THREAD  :THCREATE    pid:89 tid:4 
+t:0x6c78e CPU:00 THREAD  :THREADY     pid:89 tid:4 
+t:0x6c982 CPU:00 THREAD  :THCREATE    pid:89 tid:5 
+t:0x6cb76 CPU:00 THREAD  :THREADY     pid:89 tid:5 
+t:0x6cb9a CPU:00 PROCESS :PROCCREATE_NAME ppid:89 pid:90 name:some/directory/goes/here
+t:0x6cd8e CPU:00 THREAD  :THCREATE    pid:90 tid:1 
+t:0x6cf82 CPU:00 THREAD  :THREADY     pid:90 tid:1 
+t:0x6d176 CPU:00 THREAD  :THCREATE    pid:90 tid:2 
+t:0x6d36a CPU:00 THREAD  :THREADY     pid:90 tid:2 
+t:0x6d55e CPU:00 THREAD  :THCREATE    pid:90 tid:3 
+t:0x6d752 CPU:00 THREAD  :THREADY     pid:90 tid:3 
+t:0x6d946 CPU:00 THREAD  :THCREATE    pid:90 tid:4 
+t:0x6db3a CPU:00 THREAD  :THREADY     pid:90 tid:4 
+t:0x6dd2e CPU:00 THREAD  :THCREATE    pid:90 tid:5 
+t:0x6df22 CPU:00 THREAD  :THREADY     pid:90 tid:5 
+t:0x6df33 CPU:00 PROCESS :PROCCREATE_NAME ppid:90 pid:91 name:some/directory/goes/here
+t:0x6e127 CPU:00 THREAD  :THCREATE    pid:91 tid:1 
+t:0x6e31b CPU:00 THREAD  :THREADY     pid:91 tid:1 
+t:0x6e50f CPU:00 THREAD  :THCREATE    pid:91 tid:2 
+t:0x6e703 CPU:00 THREAD  :THREADY     pid:91 tid:2 
+t:0x6e8f7 CPU:00 THREAD  :THCREATE    pid:91 tid:3 
+t:0x6eaeb CPU:00 THREAD  :THREADY     pid:91 tid:3 
+t:0x6ecdf CPU:00 THREAD  :THCREATE    pid:91 tid:4 
+t:0x6eed3 CPU:00 THREAD  :THREADY     pid:91 tid:4 
+t:0x6f0c7 CPU:00 THREAD  :THCREATE    pid:91 tid:5 
+t:0x6f2bb CPU:00 THREAD  :THREADY     pid:91 tid:5 
+t:0x6f2dd CPU:00 PROCESS :PROCCREATE_NAME ppid:91 pid:92 name:some/directory/goes/here
+t:0x6f4d1 CPU:00 THREAD  :THCREATE    pid:92 tid:1 
+t:0x6f6c5 CPU:00 THREAD  :THREADY     pid:92 tid:1 
+t:0x6f8b9 CPU:00 THREAD  :THCREATE    pid:92 tid:2 
+t:0x6faad CPU:00 THREAD  :THREADY     pid:92 tid:2 
+t:0x6fca1 CPU:00 THREAD  :THCREATE    pid:92 tid:3 
+t:0x6fe95 CPU:00 THREAD  :THREADY     pid:92 tid:3 
+t:0x70089 CPU:00 THREAD  :THCREATE    pid:92 tid:4 
+t:0x7027d CPU:00 THREAD  :THREADY     pid:92 tid:4 
+t:0x70471 CPU:00 THREAD  :THCREATE    pid:92 tid:5 
+t:0x70665 CPU:00 THREAD  :THREADY     pid:92 tid:5 
+t:0x70661 CPU:00 PROCESS :PROCCREATE_NAME ppid:92 pid:93 name:some/directory/goes/here
+t:0x70855 CPU:00 THREAD  :THCREATE    pid:93 tid:1 
+t:0x70a49 CPU:00 THREAD  :THREADY     pid:93 tid:1 
+t:0x70c3d CPU:00 THREAD  :THCREATE    pid:93 tid:2 
+t:0x70e31 CPU:00 THREAD  :THREADY     pid:93 tid:2 
+t:0x71025 CPU:00 THREAD  :THCREATE    pid:93 tid:3 
+t:0x71219 CPU:00 THREAD  :THREADY     pid:93 tid:3 
+t:0x7140d CPU:00 THREAD  :THCREATE    pid:93 tid:4 
+t:0x71601 CPU:00 THREAD  :THREADY     pid:93 tid:4 
+t:0x717f5 CPU:00 THREAD  :THCREATE    pid:93 tid:5 
+t:0x719e9 CPU:00 THREAD  :THREADY     pid:93 tid:5 
+t:0x719c9 CPU:00 PROCESS :PROCCREATE_NAME ppid:93 pid:94 name:some/directory/goes/here
+t:0x71bbd CPU:00 THREAD  :THCREATE    pid:94 tid:1 
+t:0x71db1 CPU:00 THREAD  :THREADY     pid:94 tid:1 
+t:0x71fa5 CPU:00 THREAD  :THCREATE    pid:94 tid:2 
+t:0x72199 CPU:00 THREAD  :THREADY     pid:94 tid:2 
+t:0x7238d CPU:00 THREAD  :THCREATE    pid:94 tid:3 
+t:0x72581 CPU:00 THREAD  :THREADY     pid:94 tid:3 
+t:0x72775 CPU:00 THREAD  :THCREATE    pid:94 tid:4 
+t:0x72969 CPU:00 THREAD  :THREADY     pid:94 tid:4 
+t:0x72b5d CPU:00 THREAD  :THCREATE    pid:94 tid:5 
+t:0x72d51 CPU:00 THREAD  :THREADY     pid:94 tid:5 
+t:0x72d57 CPU:00 PROCESS :PROCCREATE_NAME ppid:94 pid:95 name:some/directory/goes/here
+t:0x72f4b CPU:00 THREAD  :THCREATE    pid:95 tid:1 
+t:0x7313f CPU:00 THREAD  :THREADY     pid:95 tid:1 
+t:0x73333 CPU:00 THREAD  :THCREATE    pid:95 tid:2 
+t:0x73527 CPU:00 THREAD  :THREADY     pid:95 tid:2 
+t:0x7371b CPU:00 THREAD  :THCREATE    pid:95 tid:3 
+t:0x7390f CPU:00 THREAD  :THREADY     pid:95 tid:3 
+t:0x73b03 CPU:00 THREAD  :THCREATE    pid:95 tid:4 
+t:0x73cf7 CPU:00 THREAD  :THREADY     pid:95 tid:4 
+t:0x73eeb CPU:00 THREAD  :THCREATE    pid:95 tid:5 
+t:0x740df CPU:00 THREAD  :THREADY     pid:95 tid:5 
+t:0x740ca CPU:00 PROCESS :PROCCREATE_NAME ppid:95 pid:96 name:some/directory/goes/here
+t:0x742be CPU:00 THREAD  :THCREATE    pid:96 tid:1 
+t:0x744b2 CPU:00 THREAD  :THREADY     pid:96 tid:1 
+t:0x746a6 CPU:00 THREAD  :THCREATE    pid:96 tid:2 
+t:0x7489a CPU:00 THREAD  :THREADY     pid:96 tid:2 
+t:0x74a8e CPU:00 THREAD  :THCREATE    pid:96 tid:3 
+t:0x74c82 CPU:00 THREAD  :THREADY     pid:96 tid:3 
+t:0x74e76 CPU:00 THREAD  :THCREATE    pid:96 tid:4 
+t:0x7506a CPU:00 THREAD  :THREADY     pid:96 tid:4 
+t:0x7525e CPU:00 THREAD  :THCREATE    pid:96 tid:5 
+t:0x75452 CPU:00 THREAD  :THREADY     pid:96 tid:5 
+t:0x75447 CPU:00 PROCESS :PROCCREATE_NAME ppid:96 pid:97 name:some/directory/goes/here
+t:0x7563b CPU:00 THREAD  :THCREATE    pid:97 tid:1 
+t:0x7582f CPU:00 THREAD  :THREADY     pid:97 tid:1 
+t:0x75a23 CPU:00 THREAD  :THCREATE    pid:97 tid:2 
+t:0x75c17 CPU:00 THREAD  :THREADY     pid:97 tid:2 
+t:0x75e0b CPU:00 THREAD  :THCREATE    pid:97 tid:3 
+t:0x75fff CPU:00 THREAD  :THREADY     pid:97 tid:3 
+t:0x761f3 CPU:00 THREAD  :THCREATE    pid:97 tid:4 
+t:0x763e7 CPU:00 THREAD  :THREADY     pid:97 tid:4 
+t:0x765db CPU:00 THREAD  :THCREATE    pid:97 tid:5 
+t:0x767cf CPU:00 THREAD  :THREADY     pid:97 tid:5 
+t:0x767e1 CPU:00 PROCESS :PROCCREATE_NAME ppid:97 pid:98 name:some/directory/goes/here
+t:0x769d5 CPU:00 THREAD  :THCREATE    pid:98 tid:1 
+t:0x76bc9 CPU:00 THREAD  :THREADY     pid:98 tid:1 
+t:0x76dbd CPU:00 THREAD  :THCREATE    pid:98 tid:2 
+t:0x76fb1 CPU:00 THREAD  :THREADY     pid:98 tid:2 
+t:0x771a5 CPU:00 THREAD  :THCREATE    pid:98 tid:3 
+t:0x77399 CPU:00 THREAD  :THREADY     pid:98 tid:3 
+t:0x7758d CPU:00 THREAD  :THCREATE    pid:98 tid:4 
+t:0x77781 CPU:00 THREAD  :THREADY     pid:98 tid:4 
+t:0x77975 CPU:00 THREAD  :THCREATE    pid:98 tid:5 
+t:0x77b69 CPU:00 THREAD  :THREADY     pid:98 tid:5 
+t:0x77b68 CPU:00 PROCESS :PROCCREATE_NAME ppid:98 pid:99 name:some/directory/goes/here
+t:0x77d5c CPU:00 THREAD  :THCREATE    pid:99 tid:1 
+t:0x77f50 CPU:00 THREAD  :THREADY     pid:99 tid:1 
+t:0x78144 CPU:00 THREAD  :THCREATE    pid:99 tid:2 
+t:0x78338 CPU:00 THREAD  :THREADY     pid:99 tid:2 
+t:0x7852c CPU:00 THREAD  :THCREATE    pid:99 tid:3 
+t:0x78720 CPU:00 THREAD  :THREADY     pid:99 tid:3 
+t:0x78914 CPU:00 THREAD  :THCREATE    pid:99 tid:4 
+t:0x78b08 CPU:00 THREAD  :THREADY     pid:99 tid:4 
+t:0x78cfc CPU:00 THREAD  :THCREATE    pid:99 tid:5 
+t:0x78ef0 CPU:00 THREAD  :THREADY     pid:99 tid:5 
+t:0x78f03 CPU:00 PROCESS :PROCCREATE_NAME ppid:99 pid:100 name:some/directory/goes/here
+t:0x790f7 CPU:00 THREAD  :THCREATE    pid:100 tid:1 
+t:0x792eb CPU:00 THREAD  :THREADY     pid:100 tid:1 
+t:0x794df CPU:00 THREAD  :THCREATE    pid:100 tid:2 
+t:0x796d3 CPU:00 THREAD  :THREADY     pid:100 tid:2 
+t:0x798c7 CPU:00 THREAD  :THCREATE    pid:100 tid:3 
+t:0x79abb CPU:00 THREAD  :THREADY     pid:100 tid:3 
+t:0x79caf CPU:00 THREAD  :THCREATE    pid:100 tid:4 
+t:0x79ea3 CPU:00 THREAD  :THREADY     pid:100 tid:4 
+t:0x7a097 CPU:00 THREAD  :THCREATE    pid:100 tid:5 
+t:0x7a28b CPU:00 THREAD  :THREADY     pid:100 tid:5 
