@@ -1,3 +1,6 @@
+HOW MANY TRACES ARE TO BE READ?
+3
+
 ARE YOU INTERESTED IN EVENT CLASSES, OR EVENTS WITHIN THE CLASSES? (0, or 1 respectively):
 0
 
@@ -5,4 +8,9 @@ EVENT CLASS OF INTEREST (if applicable):
 TH*
 
 SPECIFIC EVENT OF INTEREST (if applicable):
-:PROCCREATE_NA*
+:THNANOSLEEP
+
+PATH TO TRACES: (e.g ~/Documents/traces/trace1.trace)
+~/Documents/traces/car_traces/car1.trace
+~/Documents/traces/car_traces/car2.trace
+~/Documents/traces/car_traces/car3.trace
