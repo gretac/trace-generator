@@ -39,8 +39,6 @@ def event_counter():
 
     return total, rate_array
 
-
-
 def rate_measure(time_array):
     rate_array = []
     for k in range(tr_count):     #for each trace...
@@ -66,7 +64,6 @@ def rate_measure(time_array):
 
     return rate_array    #returns an array that shows how many events occurred within each interval of time   
 
-
 def fluctuation(rate_array):
     mean = []
     diff = []
@@ -84,9 +81,9 @@ def fluctuation(rate_array):
 	diff[k].append(max_diff)
 
 
-    #print mean
-    #print diff
-    print 417.232538      #NEEDS TO BE GENERALIZED
+    # print mean	#DEBUG
+    # print diff	#DEBUG
+
     return mean
     
 
@@ -132,6 +129,9 @@ if config[4].split()[0] == '1':
 if config[4].split()[0] == '0':
     total = event_class()        #does not exist btw...
 
- 	
+
+print total[0] / ((final_time[0] - initial_time[0])*10**(-9))
 # print "The event of interest occured", total[c], "times in trace",c+1
+
+#
 
