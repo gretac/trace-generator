@@ -1,0 +1,27 @@
+SUPER TRACE GENERATOR 3000 XTREME+ TURBO
+
+Too lazy to collect traces? Generate your own!
+
+Specify the desired trace behaviour in the included config file. The script will look for the config file in
+~/code/ by default, but it you don't like that, then you can edit the source >:[. Careful not to insert any extra
+lines in the config file as the script is reading from specific line numbers. The trace will be generated in
+the same directory that the script is run.
+
+                     .".
+                    /  |
+                   /  /
+                  / ,"
+      .-------.--- /            This software is provided to you with absolutely no warranty.
+     "._ __.-/ o. o\            ...seriously. Never trust a physics student with a computer.
+        "   (    Y  )
+             )     /
+            /     (
+           /       Y
+       .-"         |            pffft. Who am I kidding, nobody is going to use this >_>
+      /  _     \    \
+     /    `. ". ) /' )
+    Y       )( / /(,/
+   ,|      /     )
+  ( |     /     /
+   " \_  (__   (__
+       "-._,)--._,)
