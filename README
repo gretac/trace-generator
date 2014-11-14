@@ -5,11 +5,11 @@ Too lazy to collect traces? Generate your own!
 Specify the desired trace behaviour in the included config file. The config
 file is fairly straight forward, each line maps to an individual process. So
 if you're specifying multiple attributes for the same process, they should
-all be on the same line. The script will look for the config file in ~/code/ 
-by default, but if you don't like that, then you can edit the source >:[. 
-Careful not to insert any extra lines in the config file as the script 
-is reading from specific line numbers. The trace will be generated in the 
-same directory that the script is run.
+all be on the same line. The script will look for the config file in 
+~/code/trace_generator/ by default, but if you don't like that, then you 
+can edit the source >:[. Careful not to insert any extra lines in the 
+config file as the script is reading from specific line numbers. The trace 
+will be generated in the same directory that the script is run.
 
                      .".
                     /  |
