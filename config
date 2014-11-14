@@ -1,23 +1,51 @@
-SPECIFY PROCESS ID:
-01
+Number of processes: 
+3
 
-SPECIFY PROCESS NAME:
-process_name
+Process names:
+Name_1
+Name_2
+Name_3
 
-EVENT IN PROCESS:
+Respective process IDs
+1
+2
+3
+
+Number of events belonging to each process:
+2 
+4 
+1
+
+Events belonging to each process:
+:THCREATE :THREADY
+:THCREATE :THREADY :THRUNNING :THNANOSLEEP
 :THCREATE
 
-IS EVENT PERIODIC? (y/n)
-y
+Respective thread IDs:
+1 2
+1 2 3 4
+1
 
-EVENT PERIOD (ns):
-500
+Behaviour of each event:
+periodic periodic 
+periodic periodic periodic periodic
+periodic
 
-JITTER? (y/n)
-y
+Respective periods (ns):
+500 240
+100 100 75 200
+400
 
-LOWEST JITTER VALUE (ns):
--50
+--------- Not yet implemented ---------
 
-HIGHEST JITTER VALUE (ns):
-50
+jitter?
+yes yes
+yes no no yes
+ye
+
+jitter min/max:
+-50 50 , -10 10
+... etc ...
+
+
+
