@@ -17,9 +17,9 @@ Number of events belonging to each process:
 1
 
 Events belonging to each process:
-:THCREATE :THREADY
-:THCREATE :THREADY :THRUNNING :THNANOSLEEP
-:THCREATE
+:THSTUFF :THREADY
+:THSTUFF :THREADY :THRUNNING :THNANOSLEEP
+:THSTUFF 
 
 Respective thread IDs:
 1 2
@@ -36,16 +36,20 @@ Respective periods (ns):
 100 100 75 200
 400
 
---------- Not yet implemented ---------
+Jitter?
+no no
+no no no no 
+yes
 
-jitter?
-yes yes
-yes no no yes
-ye
+Minimum jitter (ns):
+none none
+none none none none
+-10
 
-jitter min/max:
--50 50 , -10 10
-... etc ...
+Maximum jitter (ns):
+none none
+none none none none
+10
 
-
-
+Total trace length (ns):
+1000
