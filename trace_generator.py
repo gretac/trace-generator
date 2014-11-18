@@ -1,7 +1,7 @@
 import os
 import random
 
-f = open(os.path.expanduser("~/code/trace_generator/config"),'r')
+f = open(os.path.expanduser("~/code/repos/trace-generator/config"),'r')
 config = f.readlines()
 f.close
 
@@ -106,7 +106,7 @@ for i in range(len(attrib)):
 attrib_backup = attrib
 
 ### CREATE TRACE & WRITE HEADER ###
-tracefile = open('trace.trace','w')
+tracefile = open(config[3 + (proc_count*10+24)].split()[0],'w')
 tracefile.write("TRACEPRINTER version 1.02\n"+"TRACEPARSER LIBRARY version 1.02\n"+" -- HEADER FILE INFORMATION --\n"+"       TRACE_FILE_NAME:: /dev/shmem/logfile.kev\n"+"            TRACE_DATE:: Mon Oct 28 17:19:14 2013\n"+"       TRACE_VER_MAJOR:: 1\n"+"       TRACE_VER_MINOR:: 01\n"+"   TRACE_LITTLE_ENDIAN:: TRUE\n"+"        TRACE_ENCODING:: 16 byte events\n"+"       TRACE_BOOT_DATE:: Mon Oct 28 11:46:56 2013\n"+"  TRACE_CYCLES_PER_SEC:: 1000000000\n"+"         TRACE_CPU_NUM:: 1\n"+"         TRACE_SYSNAME:: QNX\n"+"        TRACE_NODENAME:: localhost\n"+"     TRACE_SYS_RELEASE:: 6.5.0\n"+"     TRACE_SYS_VERSION:: 2010/07/09-14:44:03EDT\n"+"     TRACE_SYSPAGE_LEN:: 2144\n"+"         TRACE_MACHINE:: x86pc\n"+"-- KERNEL EVENTS --\n")
 
 ### PROCESS WRITE ###
@@ -130,11 +130,13 @@ for i in range(event_total):
 timestamp = 0
 while timestamp < int(config[3 + (proc_count*10+21)].split()[0]):
         for c in range(event_total):
-                if attrib[c][5] != 'none' and counter[c] == int(attrib[c][5]):
+                if attrib[c][4] == "periodic" and counter[c] == int(attrib[c][5]):
                         tracefile.write("t:" + str(timestamp) + " " + "CPU:00" + " " + "THREAD" + "  " + attrib[c][2] + "      " + "pid:" + str(attrib[c][1]) + " " + "tid:" + str(attrib[c][3]) + "\n")
                         if attrib[c][6] == 'yes':
                                 attrib[c][5] = int(attrib_backup[c][5]) + random.randint(int(attrib[c][7]),int(attrib[c][8]))
                         counter[c] = 0
+                elif attrib[c][4] == "random" and random.randint(0,100) == 50:
+                        tracefile.write("t:" + str(timestamp) + " " + "CPU:00" + " " + "THREAD" + "  " + attrib[c][2] + "      " + "pid:" + str(attrib[c][1]) + " " + "tid:" + str(attrib[c][3]) + "\n")
                 counter[c] += 1
         timestamp += 1
 

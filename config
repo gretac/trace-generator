@@ -28,12 +28,12 @@ Respective thread IDs:
 
 Behaviour of each event:
 periodic periodic 
-periodic periodic periodic periodic
+periodic periodic periodic random
 periodic
 
 Respective periods (ns):
 500 240
-100 100 75 200
+100 100 75 none
 400
 
 Jitter?
@@ -53,3 +53,6 @@ none none none none
 
 Total trace length (ns):
 1000
+
+Trace name:
+trace_name.trace
