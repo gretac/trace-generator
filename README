@@ -4,19 +4,20 @@ Too lazy to collect traces? Generate your own!
 
 Specify the desired trace behaviour in the included config file. The config
 file is fairly straight forward, with each line mapping to an individual process.
-The script will look for the config file in ~/code/repos/trace-generator/ by default,
-but if you don't like that, then you can edit the source >:[. Careful not to insert
-any extra lines in the config file as the script is reading from specific line
-numbers. The trace will be generated in the same directory that the script is run.
+The script will look for the config file in ~/code/repos/trace-generator/ by
+default, but if you don't like that, then you can edit the source >:[. Careful
+not to insert any extra lines in the config file as the script is reading from
+specific line numbers. The trace will be generated in the same directory that
+the script is run.
 
-The possible choices for the event behaviours are "periodic" and "random". If you
-choose random behaviour, the following "period" configuration obviously doesn't apply,
-but you should add something in-line as a place holder such as "none". See the supplied
-example config file.
+The possible choices for the event behaviours are "periodic" and "random". If
+you choose random behaviour, the following "period" configuration obviously
+doesn't apply, but you should add something in-line as a place holder such as
+"none". See the supplied example config file.
 
-Please note that it is possible to configure the trace generator in such a way that
-several events occur at the same time. Finally, make sure to use the python2
-interpreter!!
+Please note that it is possible to configure the trace generator in such a way
+that several events occur at the same time. Finally, make sure to use the
+python2 interpreter!!
 
                      .".
                     /  |
