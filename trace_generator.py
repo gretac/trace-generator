@@ -1,3 +1,4 @@
+import copy
 import os
 import random
 
@@ -103,7 +104,7 @@ for i in range(len(attrib)):
 '''
 
 ### MAKE A BACKUP COPY OF THE ATTRIBUTE LIST ###
-attrib_backup = attrib
+attrib_backup = copy.deepcopy(attrib)
 
 ### CREATE TRACE & WRITE HEADER ###
 tracefile = open(config[3 + (proc_count*10+24)].split()[0],'w')
