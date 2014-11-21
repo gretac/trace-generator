@@ -19,7 +19,7 @@ Number of events belonging to each process:
 Events belonging to each process:
 :THSTUFF :THREADY
 :THSTUFF :THREADY :THRUNNING :THNANOSLEEP
-:THSTUFF 
+:THSTUFF  
 
 Respective thread IDs:
 1 2
@@ -50,6 +50,16 @@ Maximum jitter (ns):
 none none
 none none none none
 10
+
+Burst?			]
+no yes			]-------- NON-FUNCTIONAL
+no no no no		]
+no
+
+Burst Parameters [ number of events in burst | burst length | random/periodic | number of bursts in trace(if random)/burst period(if periodic) ]:
+none [ 10 1000 periodic 100 ]
+none none none none
+none
 
 Total trace length (ns):
 1000
