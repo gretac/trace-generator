@@ -155,15 +155,29 @@ for c in range(proc_count):
               tracefile.write("t:" + "0" + " " + "CPU:00" + " " + "THREAD" + "  " + ":THCREATE" + "      " + "pid:" + str(c+1) + " " + "tid:" + str(k+1) + "\n")
         
 ### CREATE A COUNTER FOR EACH EVENT ###
-counter = [0] * event_total
+counter = [0] * event_total   # for periodic events
+burst_counter = [0] * event_total       # for periodic bursts
 
 ### CHANGE PERIODS ACCORDING TO JITTER ###
 for i in range(event_total):
         if attrib[i][6] == "yes":
                 attrib[i][5] = int(attrib[i][5]) + random.randint(int(attrib[i][7]),int(attrib[i][8]))
 
+### DETERMINES TIMES FOR RANDOM BURSTS ###
+random_burst_times = []
+for i in range(event_total):
+        random_burst_times.append([])
+        if attrib[i][9] == "yes" and attrib[i][13] == "random":
+                for k in range(int(attrib[i][14])):
+                        random_burst_times[i].append(random.randint(0 , int(config[3 + (proc_count*12+25)].split()[0])))
+
+'''                        
+print random_burst_times                                                     
+'''
+
 ### BEGIN PRINTING TO TRACE ###
 timestamp = 0
+random_burst_count = 0
 while timestamp < int(config[3 + (proc_count*12+25)].split()[0]):
         for c in range(event_total):
                 ### HANDLES PERIODIC BEHAVIOUR ###
@@ -173,12 +187,53 @@ while timestamp < int(config[3 + (proc_count*12+25)].split()[0]):
                         if attrib[c][6] == 'yes':
                                 attrib[c][5] = int(attrib_backup[c][5]) + random.randint(int(attrib[c][7]),int(attrib[c][8]))
                         counter[c] = 0
+
                 ### HANDLES RANDOM EVENTS ###
                 elif attrib[c][4] == "random" and random.randint(0,100) == 50:
                         tracefile.write("t:" + str(timestamp) + " " + "CPU:00" + " " + "THREAD" + "  " + attrib[c][2] + "      " + "pid:" + str(attrib[c][1]) + " " + "tid:" + str(attrib[c][3]) + "\n")
-                ### HANDLES BURSTS ###
-#                elif... 
-                counter[c] += 1
+
+                ### HANDLES PERIODIC BURSTS ###
+                if attrib[c][9] == "yes" and attrib[c][13] == "periodic" and burst_counter[c] == int(attrib[c][14]):
+                        burst_timer = 0
+                        burst_period = int(attrib[c][12]) / (int(attrib[c][11]) - 1)
+                        sub_counter = burst_period
+                        while burst_timer <= int(attrib[c][12]): # enter burst loop
+                                if sub_counter == burst_period:
+                                        tracefile.write("t:" + str(timestamp+burst_timer) + " " + "CPU:00" + " " + "THREAD" + "  " + attrib[c][2] + "      " + "pid:" + str(attrib[c][1]) + " " + "tid:" + str(attrib[c][3]) + "\n")
+                                        sub_counter = 0
+                                burst_timer += 1
+                                sub_counter += 1                                
+                        burst_counter[c] = 0
+
+
+
+                counter[c] += 1          
+                burst_counter[c] += 1
         timestamp += 1
 
+
 tracefile.close()
+
+'''                        
+                ### HANDLES RANDOM BURSTS ###
+                if attrib[c][9] == "yes" and attrib[c][13] == "random" and random_burst_count != int(attrib[c][14]):
+                        for j in range(len(random_burst_times[c])):
+                                if counter[c] == random_burst_times[c][j]:
+
+                                        burst_timer = 0
+                                        burst_period = int(attrib[c][12]) / (int(attrib[c][11]) - 1)
+                                        sub_counter = burst_period
+
+                                        while burst_timer <= int(attrib[c][12]): # enter burst loop
+                                                if sub_counter == burst_period:
+                                                        tracefile.write("t:" + str(timestamp+burst_timer) + " " + "CPU:00" + " " + "THREAD" + "  " + attrib[c][2] + "      " + "pid:" + str(attrib[c][1]) + " " + "tid:" + str(attrib[c][3]) + "\n")
+                                                        random_burst_count += 1
+                                                        sub_counter = 0
+                                                burst_timer += 1
+                                                sub_counter += 1                                
+                                        burst_counter[c] = 0
+'''
+
+
+
+
