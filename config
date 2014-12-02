@@ -51,7 +51,7 @@ none none
 none none none none
 10
 
-Burst?	                  BURSTY BEHAVIOUR IS NON-FUNCTIONAL
+Burst?	                 
 no yes		
 no no no no		
 no
@@ -62,7 +62,7 @@ none none none none
 none
 
 Total trace length (ns):
-1001
+2000
 
 Trace name:
 trace_name.trace

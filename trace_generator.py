@@ -166,6 +166,19 @@ for i in range(len(attrib)):
         print attrib[i]
 '''
 
+### CREATING BURST LISTS ###
+burst_interval = []
+for c in range(event_total):
+        if attrib[c][9] == 'yes':
+                burst_interval.append(int(attrib[c][12])/(int(attrib[c][11])))
+        else:
+                burst_interval.append(0)
+
+### INITIALIZE COUNTERS ###
+burst_interval_counter = [0] * event_total
+period_counter = [2] * event_total
+burst_period_counter = [1] * event_total
+
 ### BEGIN PRINTING TO TRACE ###
 timestamp = 0
 next_options = []
@@ -173,32 +186,46 @@ next_options = []
 for c in range(len(attrib)):
         next_options.append([])
         next_options[c].append(attrib[c][5])
+        next_options[c].append("xxxxx")
         
-        if attrib[c][6] == 'yes':
-                next_options[c][0] = int(attrib[c][5]) + random.randint( int(attrib[c][7]), int(attrib[c][8]) )
-        elif attrib[c][5] != 'none':
-                next_options[c][0] = int(attrib[c][5])
+        # set new NEXT values
+        if attrib[c][6] == 'yes':       #for periodic behaviour with jitter
+                next_options[c][0] = [int(attrib[c][5]) + random.randint( int(attrib[c][7]), int(attrib[c][8]) ), "periodic"]
+
+        elif attrib[c][5] != 'none':    #for periodic behaviour with no jitter
+                next_options[c][0] = [int(attrib[c][5]), "periodic"]
                 
+                if attrib[c][9] == 'yes':       #for bursty shit
+                        if attrib[c][13] == 'periodic':   #for periodic bursts
+                                next_options[c][1] = [burst_interval_counter[c] * burst_interval[c] + int(attrib[c][14]), "bursty"]
+                                
         NEXT[c] = min(next_options[c])
 
 
-period_counter = [2] * event_total
 
 while timestamp < int(config[3 + (proc_count*12+25)].split()[0]):
-        for c in range(len(attrib)):
-                if NEXT[c] != "none" and counter[c] == int(NEXT[c]):
+        for c in range(len(attrib)):               
+                if NEXT[c][0] != "none" and counter[c] == NEXT[c][0]:
                         tracefile.write("t:" + str(timestamp) + " " + "CPU:00" + " " + "THREAD" + "  " + str(attrib[c][2]) + "      " + "pid:" + str(attrib[c][1]) + " " + "tid:" + str(attrib[c][3]) + "\n")
 
                         # set new NEXT values
-                        if attrib[c][6] == 'yes':
-                                next_options[c][0] = period_counter[c]  * int(attrib[c][5]) + random.randint( int(attrib[c][7]), int(attrib[c][8]) )
-                        elif attrib[c][5] != 'none':
-                                next_options[c][0] = period_counter[c] * int(attrib[c][5])
-                        
-                        period_counter[c] += 1
+                        if attrib[c][6] == 'yes' and NEXT[c][1] == 'periodic':       #for periodic behaviour with jitter
+                                next_options[c][0] = [period_counter[c]  * int(attrib[c][5]) + random.randint( int(attrib[c][7]), int(attrib[c][8]) ), "periodic"]
+                                period_counter[c] += 1
+                        elif attrib[c][5] != 'none' and NEXT[c][1] == 'periodic':    #for periodic behaviour with no jitter
+                                next_options[c][0] = [period_counter[c] * int(attrib[c][5]), "periodic"]
+                                period_counter[c] += 1
+
+                        if attrib[c][9] == 'yes' and NEXT[c][1] == 'bursty':       #for bursty shit
+                                if attrib[c][13] == 'periodic':   #for periodic bursts
+                                        burst_interval_counter[c] += 1
+                                        if burst_interval_counter[c] > int(attrib[c][11])-1:
+                                                burst_interval_counter[c] = 0
+                                                burst_period_counter[c] += 1
+                                        next_options[c][1] = [burst_interval_counter[c] * burst_interval[c] + int(attrib[c][14]) * burst_period_counter[c], "bursty"]                
+                if NEXT[c] != 'none':
                         NEXT[c] = min(next_options[c])
                 counter[c] += 1
         timestamp += 1
-
                 
 tracefile.close()
