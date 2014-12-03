@@ -1,4 +1,3 @@
-import copy
 import os
 import random
 
@@ -132,9 +131,6 @@ for k in range(proc_count):
                                attrib[counter].append(burst_param[k][c+x])
                 counter += 1
 
-### MAKE A BACKUP COPY OF THE ATTRIBUTE LIST ###
-attrib_backup = copy.deepcopy(attrib)
-
 ### CREATE TRACE & WRITE HEADER ###
 tracefile = open(config[3 + (proc_count*12+28)].split()[0],'w')
 tracefile.write("TRACEPRINTER version 1.02\n"+"TRACEPARSER LIBRARY version 1.02\n"+" -- HEADER FILE INFORMATION --\n"+"       TRACE_FILE_NAME:: /dev/shmem/logfile.kev\n"+"            TRACE_DATE:: Mon Oct 28 17:19:14 2013\n"+"       TRACE_VER_MAJOR:: 1\n"+"       TRACE_VER_MINOR:: 01\n"+"   TRACE_LITTLE_ENDIAN:: TRUE\n"+"        TRACE_ENCODING:: 16 byte events\n"+"       TRACE_BOOT_DATE:: Mon Oct 28 11:46:56 2013\n"+"  TRACE_CYCLES_PER_SEC:: 1000000000\n"+"         TRACE_CPU_NUM:: 1\n"+"         TRACE_SYSNAME:: QNX\n"+"        TRACE_NODENAME:: localhost\n"+"     TRACE_SYS_RELEASE:: 6.5.0\n"+"     TRACE_SYS_VERSION:: 2010/07/09-14:44:03EDT\n"+"     TRACE_SYSPAGE_LEN:: 2144\n"+"         TRACE_MACHINE:: x86pc\n"+"-- KERNEL EVENTS --\n")
@@ -153,76 +149,112 @@ counter = [0] * event_total
 NEXT = [0] * event_total
 
 ### DETERMINES TIMES FOR RANDOM BURSTS ###
-random_burst_times = []
-for i in range(event_total):
-        random_burst_times.append([])
-        if attrib[i][9] == "yes" and attrib[i][13] == "random":
-                for k in range(int(attrib[i][14])):
-                        random_burst_times[i].append(random.randint(0 , int(config[3 + (proc_count*12+25)].split()[0])))
+rburst_time = []
+status = "bad"
+while status == "bad":
+        rburst_time = []
+        for i in range(event_total):
+                rburst_time.append([])
+                if attrib[i][9] == "yes" and attrib[i][13] == "random":
+                        for k in range(int(attrib[i][14])):
+                                rburst_time[i].append(random.randint(0 , int(config[3 + (proc_count*12+25)].split()[0])))
+                                if k > 0 and (rburst_time[i][k] - rburst_time[i][k-1]) >= int(attrib[i][12]):
 
+                                        status = "BALLER"
+                        rburst_time[i] = sorted(rburst_time[i])
 '''
 ## PRINT ATTRIBUTE LISTS ###                
 for i in range(len(attrib)):
         print attrib[i]
 '''
 
-### CREATING BURST LISTS ###
-burst_interval = []
+### CREATING LIST OF BURST INTERVALS ###
+burstint = []
 for c in range(event_total):
         if attrib[c][9] == 'yes':
-                burst_interval.append(int(attrib[c][12])/(int(attrib[c][11])))
+                burstint.append(int(attrib[c][12])/(int(attrib[c][11])))
         else:
-                burst_interval.append(0)
+                burstint.append(0)
 
 ### INITIALIZE COUNTERS ###
-burst_interval_counter = [0] * event_total
-period_counter = [2] * event_total
-burst_period_counter = [1] * event_total
+burstint_mult = [0] * event_total
+pcount = [2] * event_total
+pburst_count = [1] * event_total
+rburst_count = [0] * event_total
 
-### BEGIN PRINTING TO TRACE ###
-timestamp = 0
+### INITIALIZE NEXT VALUES ###
 next_options = []
-
 for c in range(len(attrib)):
         next_options.append([])
         next_options[c].append(attrib[c][5])
         next_options[c].append("xxxxx")
         
-        # set new NEXT values
         if attrib[c][6] == 'yes':       #for periodic behaviour with jitter
                 next_options[c][0] = [int(attrib[c][5]) + random.randint( int(attrib[c][7]), int(attrib[c][8]) ), "periodic"]
+
+                if attrib[c][9] == 'yes':       #for bursty shit
+
+                        if attrib[c][13] == 'periodic':   #for periodic bursts
+                                next_options[c][1] = [burstint_mult[c] * burstint[c] + int(attrib[c][14]), "bursty"]
+                                
+                        elif attrib[c][13] == 'random':     #for random bursts
+                                next_options[c][1] = [rburst_time[c][0]  , "bursty"]
 
         elif attrib[c][5] != 'none':    #for periodic behaviour with no jitter
                 next_options[c][0] = [int(attrib[c][5]), "periodic"]
                 
                 if attrib[c][9] == 'yes':       #for bursty shit
+
                         if attrib[c][13] == 'periodic':   #for periodic bursts
-                                next_options[c][1] = [burst_interval_counter[c] * burst_interval[c] + int(attrib[c][14]), "bursty"]
+                                next_options[c][1] = [burstint_mult[c] * burstint[c] + int(attrib[c][14]), "bursty"]
                                 
+                        elif attrib[c][13] == 'random':     #for random bursts
+                                next_options[c][1] = [rburst_time[c][0]  , "bursty"]
+
         NEXT[c] = min(next_options[c])
 
 
-
+### BEGIN PRINTING TO TRACE ###
+timestamp = 0
 while timestamp < int(config[3 + (proc_count*12+25)].split()[0]):
         for c in range(len(attrib)):               
                 if NEXT[c][0] != "none" and counter[c] == NEXT[c][0]:
                         tracefile.write("t:" + str(timestamp) + " " + "CPU:00" + " " + "THREAD" + "  " + str(attrib[c][2]) + "      " + "pid:" + str(attrib[c][1]) + " " + "tid:" + str(attrib[c][3]) + "\n")
 
+
                         # set new NEXT values
                         if attrib[c][6] == 'yes' and NEXT[c][1] == 'periodic':       #for periodic behaviour with jitter
-                                next_options[c][0] = [period_counter[c]  * int(attrib[c][5]) + random.randint( int(attrib[c][7]), int(attrib[c][8]) ), "periodic"]
-                                period_counter[c] += 1
+                                next_options[c][0] = [pcount[c]  * int(attrib[c][5]) + random.randint( int(attrib[c][7]), int(attrib[c][8]) ), "periodic"]
+                                pcount[c] += 1
+
+
                         elif attrib[c][5] != 'none' and NEXT[c][1] == 'periodic':    #for periodic behaviour with no jitter
-                                next_options[c][0] = [period_counter[c] * int(attrib[c][5]), "periodic"]
-                                period_counter[c] += 1
+                                next_options[c][0] = [pcount[c] * int(attrib[c][5]), "periodic"]
+                                pcount[c] += 1
+
 
                         if attrib[c][9] == 'yes' and NEXT[c][1] == 'bursty':       #for bursty shit
+
+
                                 if attrib[c][13] == 'periodic':   #for periodic bursts
-                                        burst_interval_counter[c] += 1
-                                        if burst_interval_counter[c] > int(attrib[c][11])-1:
-                                                burst_interval_counter[c] = 0
-                                                burst_period_counter[c] += 1
-                                        next_options[c][1] = [burst_interval_counter[c] * burst_interval[c] + int(attrib[c][14]) * burst_period_counter[c], "bursty"]                
+                                        burstint_mult[c] += 1
+                                        if burstint_mult[c] > int(attrib[c][11])-1:
+                                                burstint_mult[c] = 0
+                                                pburst_count[c] += 1
+                                        next_options[c][1] = [burstint_mult[c] * burstint[c] + int(attrib[c][14]) * pburst_count[c], "bursty"]                
+
+
+                                elif attrib[c][13] == 'random':   #for random bursts
+                                        burstint_mult[c] += 1
+                                        if burstint_mult[c] > int(attrib[c][11])-1:
+                                                burstint_mult[c] = 0
+                                                rburst_count[c] += 1
+
+                                        if rburst_count[c] > int(attrib[c][14]) - 1:
+                                                next_options[c][1] = ["done", "bursty"]
+                                        else:
+                                                next_options[c][1] = [burstint_mult[c] * burstint[c] + rburst_time[c][rburst_count[c]], "bursty"] 
+                                                
                 if NEXT[c] != 'none':
                         NEXT[c] = min(next_options[c])
                 counter[c] += 1

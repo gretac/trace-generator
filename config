@@ -54,15 +54,15 @@ none none none none
 Burst?	                 
 no yes		
 no no no no		
-no
+yes
 
 Burst Parameters [ number of events in burst | burst length | random/periodic | number of bursts in trace(if random)/burst period(if periodic) ]:
 none [ 10 100 periodic 500 ]
 none none none none
-none
+[ 10 100 random 2 ]
 
 Total trace length (ns):
-2000
+1001
 
 Trace name:
 trace_name.trace
