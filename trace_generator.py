@@ -5,22 +5,26 @@ f = open(os.path.expanduser("~/code/repos/trace-generator/config"),'r')
 config = f.readlines()
 f.close
 
-proc_count = int(config[1].strip())	#Reads how many processes there are, and converts it to an integer
+global proc_count
+proc_count = int(config[1].strip())	#reads how many processes there are, and converts it to an integer
+
+def confread1(pnames, strint):
+        dat_list = []
+        for c in range(proc_count):
+                if strint == "string":
+                        dat_list.append(config[c + pnames].strip())
+                elif strint == "integer":
+                        dat_list.append(int(config[c + pnames].strip()))                        
+        return dat_list
 
 ### GENERATES A LIST OF PROCESS NAMES ###
-proc_names = []
-for c in range(proc_count):		
-	proc_names.append(config[c+4].strip())
+proc_names = confread1(4, "string")
 
 ### GENERATES A LIST OF PROCESS IDs ###
-pid = []
-for c in range(proc_count):		
-	pid.append(int(config[3 + (proc_count+3) + c]))
+pid = confread1(3 + (proc_count+3), "integer")
         
 ### GENERATES A LIST OF HOW MANY EVENTS BELONG TO EACH PROCESS ###
-event_count = [] 
-for c in range(proc_count):
-	event_count.append(int(config[3 + (proc_count*2+5) + c]))
+event_count = confread1(3 + (proc_count*2+5), "integer")
 
 ### TOTAL NUMBER OF EVENTS ###
 event_total = 0
