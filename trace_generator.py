@@ -45,6 +45,9 @@ jitter = confread2(3 + (proc_count*7+15)) #list for whether periodic events cont
 min_jitter = confread2(3 + (proc_count*8+17)) #list of minimum jitter values
 max_jitter = confread2(3 + (proc_count*9+19)) #list of minimum jitter values
 burst = confread2(3 + (proc_count*10+21)) #list for whether events exhibit bursty behaviour
+burst_jitter = confread2(3 + (proc_count*12+25)) #list for whether periodic bursts contain jitter
+burst_min = confread2(3 + (proc_count*13+27)) #list of minimum burst jitter values
+burst_max = confread2(3 + (proc_count*14+29)) #list of maximum burst jitter values
 
 ### GENERATES A LIST OF BURST PARAMETERS ###
 burst_param = []
@@ -76,10 +79,13 @@ for k in range(proc_count):
                 elif burst[k][c] == "yes":
                        for x in range(6):
                                attrib[counter].append(burst_param[k][c+x])
+                attrib[counter].append(burst_jitter[k][c])
+                attrib[counter].append(burst_min[k][c])
+                attrib[counter].append(burst_max[k][c])
                 counter += 1
 
 ### CREATE TRACE & WRITE HEADER ###
-tracefile = open(config[3 + (proc_count*12+28)].split()[0],'w')
+tracefile = open(config[3 + (proc_count*15+34)].split()[0],'w')
 tracefile.write("TRACEPRINTER version 1.02\n"+"TRACEPARSER LIBRARY version 1.02\n"+" -- HEADER FILE INFORMATION --\n"+"       TRACE_FILE_NAME:: /dev/shmem/logfile.kev\n"+"            TRACE_DATE:: Mon Oct 28 17:19:14 2013\n"+"       TRACE_VER_MAJOR:: 1\n"+"       TRACE_VER_MINOR:: 01\n"+"   TRACE_LITTLE_ENDIAN:: TRUE\n"+"        TRACE_ENCODING:: 16 byte events\n"+"       TRACE_BOOT_DATE:: Mon Oct 28 11:46:56 2013\n"+"  TRACE_CYCLES_PER_SEC:: 1000000000\n"+"         TRACE_CPU_NUM:: 1\n"+"         TRACE_SYSNAME:: QNX\n"+"        TRACE_NODENAME:: localhost\n"+"     TRACE_SYS_RELEASE:: 6.5.0\n"+"     TRACE_SYS_VERSION:: 2010/07/09-14:44:03EDT\n"+"     TRACE_SYSPAGE_LEN:: 2144\n"+"         TRACE_MACHINE:: x86pc\n"+"-- KERNEL EVENTS --\n")
 
 ### PROCESS WRITE ###
@@ -104,7 +110,7 @@ while status == "bad":
                 rburst_time.append([])
                 if attrib[i][9] == "yes" and attrib[i][13] == "random":
                         for k in range(int(attrib[i][14])):
-                                rburst_time[i].append(random.randint(0 , int(config[3 + (proc_count*12+25)].split()[0])))
+                                rburst_time[i].append(random.randint(0 , int(config[3 + (proc_count*15+31)].split()[0])))
                                 if k > 0 and (rburst_time[i][k] - rburst_time[i][k-1]) >= int(attrib[i][12]):
 
                                         status = "BALLER"
@@ -163,7 +169,7 @@ for c in range(len(attrib)):
 
 ### BEGIN PRINTING TO TRACE ###
 timestamp = 0
-while timestamp < int(config[3 + (proc_count*12+25)].split()[0]):
+while timestamp < int(config[3 + (proc_count*15+31)].split()[0]):
         for c in range(len(attrib)):               
                 if NEXT[c][0] != "none" and counter[c] == NEXT[c][0]:
                         tracefile.write("t:" + str(timestamp) + " " + "CPU:00" + " " + "THREAD" + "  " + str(attrib[c][2]) + "      " + "pid:" + str(attrib[c][1]) + " " + "tid:" + str(attrib[c][3]) + "\n")
@@ -183,12 +189,20 @@ while timestamp < int(config[3 + (proc_count*12+25)].split()[0]):
                         if attrib[c][9] == 'yes' and NEXT[c][1] == 'bursty':       #for bursty shit
 
 
-                                if attrib[c][13] == 'periodic':   #for periodic bursts with no jitter
+                                if attrib[c][13] == 'periodic' and attrib[c][16] == 'no':   #for periodic bursts with no jitter
                                         burstint_mult[c] += 1
                                         if burstint_mult[c] > int(attrib[c][11])-1:
                                                 burstint_mult[c] = 0
                                                 pburst_count[c] += 1
                                         next_options[c][1] = [burstint_mult[c] * burstint[c] + int(attrib[c][14]) * pburst_count[c], "bursty"]                
+                                
+                                elif attrib[c][13] == 'periodic' and attrib[c][16] == 'yes':  #for periodic bursts with jitter
+                                        burstint_mult[c] += 1
+                                        if burstint_mult[c] > int(attrib[c][11])-1:
+                                                burstint_mult[c] = 0
+                                                pburst_count[c] += 1
+                                        next_options[c][1] = [burstint_mult[c] * burstint[c] + (int(attrib[c][14])  + random.randint( int(attrib[c][17]) , int(attrib[c][18]) )) * pburst_count[c], "bursty"]                
+
 
 
                                 elif attrib[c][13] == 'random':   #for random bursts

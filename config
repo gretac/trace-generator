@@ -61,6 +61,21 @@ none [ 10 100 periodic 500 ]
 none none none none
 [ 10 100 random 2 ]
 
+Jitter for periodic bursts?
+no yes
+no no no no
+no
+
+Minimim jitter (ns):
+none -1
+none none none none
+none
+
+Maximum jitter (ns):
+none 1
+none none none none
+none
+
 Total trace length (ns):
 1001
 
