@@ -8,7 +8,7 @@ f.close
 global proc_count
 proc_count = int(config[1].strip())	#reads how many processes there are, and converts it to an integer
 
-def confread1(pnames, strint):
+def confread(pnames, strint):
         dat_list = []
         for c in range(proc_count):
                 if strint == "string":
@@ -17,92 +17,35 @@ def confread1(pnames, strint):
                         dat_list.append(int(config[c + pnames].strip()))                        
         return dat_list
 
-### GENERATES A LIST OF PROCESS NAMES ###
-proc_names = confread1(4, "string")
+def confread2(ploc):
+        dat_list = []
+        temp_list = []
+        for c in range(proc_count):
+                temp_list = []
+                for k in range(event_count[c]):
+                        temp_list.append(config[c + ploc].split()[k])
+                dat_list.append(temp_list)
+        return dat_list
 
-### GENERATES A LIST OF PROCESS IDs ###
-pid = confread1(3 + (proc_count+3), "integer")
+proc_names = confread(4, "string") #list of process names
+pid = confread(3 + (proc_count+3), "integer") #list of process IDs
         
-### GENERATES A LIST OF HOW MANY EVENTS BELONG TO EACH PROCESS ###
-event_count = confread1(3 + (proc_count*2+5), "integer")
+global event_count #global for use in functions 
+event_count = confread(3 + (proc_count*2+5), "integer") #list of how many events belong to each process
 
-### TOTAL NUMBER OF EVENTS ###
-event_total = 0
+event_total = 0   #total number of events
 for c in range(proc_count):
         event_total += event_count[c]
 
-### GENERATES A LIST OF LISTS CONTAINING EVENTS FOR EACH PROCESS ###
-event_list = []
-event_list_temp = []
-for c in range(proc_count):
-	event_list_temp = []
-	for k in range(event_count[c]):
-		event_list_temp.append(config[3 + (proc_count*3+7) + c].split()[k])
-	event_list.append(event_list_temp)
+event_list = confread2(3 + (proc_count*3+7)) #list containing events for each process
+tid = confread2(3 + (proc_count*4+9)) #list of thread IDs
+event_behav = confread2(3 + (proc_count*5+11)) #list of event behaviours (periodic, random, etc..)
+behav_param = confread2(3 + (proc_count*6+13)) #list of parameters for event behaviours
+jitter = confread2(3 + (proc_count*7+15)) #list for whether periodic events contain jitter
+min_jitter = confread2(3 + (proc_count*8+17)) #list of minimum jitter values
+max_jitter = confread2(3 + (proc_count*9+19)) #list of minimum jitter values
+burst = confread2(3 + (proc_count*10+21)) #list for whether events exhibit bursty behaviour
 
-### GENERATES A LIST OF THREAD IDs ###
-tid = []
-tid_temp = []
-for c in range(proc_count):
-	tid_temp = []
-	for k in range(event_count[c]):
-		tid_temp.append(config[3 + (proc_count*4+9) + c].split()[k])
-	tid.append(tid_temp)
-        
-### GENERATES A LIST OF EVENT BEHAVIOURS ###
-event_behav = []
-event_behav_temp = []
-for c in range(proc_count):
-	event_behav_temp = []
-	for k in range(event_count[c]):
-		event_behav_temp.append(config[3 + (proc_count*5+11) + c].split()[k])
-	event_behav.append(event_behav_temp)
-
-### GENERATES A LIST OF EVENT BEHAVIOUR PARAMETERS ###
-behav_param = []
-behav_param_temp = []
-for c in range(proc_count):
-	behav_param_temp = []
-	for k in range(event_count[c]):
-		behav_param_temp.append(config[3 + (proc_count*6+13) + c].split()[k])
-	behav_param.append(behav_param_temp)
-
-### GENERATES A LIST FOR WHETHER EVENTS CONTAIN ANY JITTER ###
-jitter = []
-jitter_temp = []
-for c in range(proc_count):
-	jitter_temp = []
-	for k in range(event_count[c]):
-		jitter_temp.append(config[3 + (proc_count*7+15) + c].split()[k])
-	jitter.append(jitter_temp)
-
-### GENERATES A LIST FOR MINIMUM JITTER VALUES ###
-min_jitter = []
-min_jitter_temp = []
-for c in range(proc_count):
-	min_jitter_temp = []
-	for k in range(event_count[c]):
-		min_jitter_temp.append(config[3 + (proc_count*8+17) + c].split()[k])
-        min_jitter.append(min_jitter_temp)
-
-### GENERATES A LIST FOR MAXIMUM JITTER VALUES ###
-max_jitter = []
-max_jitter_temp = []
-for c in range(proc_count):
-	max_jitter_temp = []
-	for k in range(event_count[c]):
-		max_jitter_temp.append(config[3 + (proc_count*9+19) + c].split()[k])
-        max_jitter.append(max_jitter_temp)
-
-### GENERATES A LIST FOR WHETHER EVENTS EXHIBIT BURSTY BEHAVIOUR ### 
-burst = []
-burst_temp = []
-for c in range(proc_count):
-	burst_temp = []
-	for k in range(event_count[c]):
-		burst_temp.append(config[3 + (proc_count*10+21) + c].split()[k])
-	burst.append(burst_temp)
-        
 ### GENERATES A LIST OF BURST PARAMETERS ###
 burst_param = []
 burst_param_temp = []
@@ -240,7 +183,7 @@ while timestamp < int(config[3 + (proc_count*12+25)].split()[0]):
                         if attrib[c][9] == 'yes' and NEXT[c][1] == 'bursty':       #for bursty shit
 
 
-                                if attrib[c][13] == 'periodic':   #for periodic bursts
+                                if attrib[c][13] == 'periodic':   #for periodic bursts with no jitter
                                         burstint_mult[c] += 1
                                         if burstint_mult[c] > int(attrib[c][11])-1:
                                                 burstint_mult[c] = 0
