@@ -14,70 +14,85 @@ Respective process IDs
 Number of events belonging to each process:
 2 
 4 
-1
+2
 
 Events belonging to each process:
-:THSTUFF :THREADY
-:THSTUFF :THREADY :THRUNNING :THNANOSLEEP
-:THSTUFF  
+:THSTUFF1 :THREADY1
+:THSTUFF2 :THREADY2 :THRUNNING2 :THNANOSLEEP2
+:THSTUFF3 :THRUNNING3
 
 Respective thread IDs:
 1 2
 1 2 3 4
-1
+1 2
 
 Behaviour of each event:
 periodic periodic 
-periodic periodic periodic random
-periodic
+periodic periodic periodic periodic
+periodic random
 
 Respective periods (ns):
-500 240
-100 100 75 none
-400
+500 200
+100 300 1000 800
+600 none
 
 Jitter?
+no yes
+no no yes yes
 no no
-no no no no 
-yes
 
 Minimum jitter (ns):
+none -50
+none none -100 -20
 none none
-none none none none
--10
 
 Maximum jitter (ns):
+none 50
+none none 100 20
 none none
-none none none none
-10
 
-Burst?	                 
-no yes		
-no no no no		
-yes
+Burst?
+no no
+yes yes yes yes
+yes no
 
-Burst Parameters [ number of events in burst | burst length | random/periodic | number of bursts in trace(if random)/burst period(if periodic) ]:
-none [ 10 100 periodic 500 ]
-none none none none
-[ 10 100 random 2 ]
+Number of events in bursts:
+none none
+10 5 15 20
+10 none
+
+Burst length (ns):
+none none
+100 50 45 100
+100 none
+
+Burst behaviour:
+none none
+periodic periodic periodic periodic
+random none
+
+Parameters for bursty behaviour (burst periodid if periodic, number of bursts if random):
+none none
+500 400 1000 1000
+2 none
 
 Jitter for periodic bursts?
-no yes
-no no no no
-no
+no no
+no yes no yes
+no no
 
 Minimim jitter (ns):
-none -1
-none none none none
-none
+none none
+none -2 none -1
+none none
 
 Maximum jitter (ns):
-none 1
-none none none none
-none
+none none
+none 3 none 1
+none none
 
 Total trace length (ns):
-1001
+100000
 
 Trace name:
-trace_name.trace
+mixed-trace-1.trace
