@@ -115,13 +115,14 @@ burstint_mult = [0] * event_total
 pcount = [2] * event_total
 pburst_count = [1] * event_total
 rburst_count = [0] * event_total
+me_too = [0] * event_total
 
 ### INITIALIZE NEXT VALUES ###
 next_options = []
 for c in range(len(attrib)):
         next_options.append([])
         next_options[c].append(attrib[c][5])
-        next_options[c].append("xxxxx")
+        next_options[c].append(["xxx","xxx"])
         
         if attrib[c][4] == 'random':     #for random behaviour
                 next_options[c][0] = [random.randint(0,  int(config[3 + (proc_count*17+40)].split()[0])), 'random']
@@ -167,13 +168,13 @@ while timestamp < int(config[3 + (proc_count*17+40)].split()[0]):
                                 next_options[c][0] = [pcount[c]  * int(attrib[c][5]) + random.randint( int(attrib[c][7]), int(attrib[c][8]) ), "periodic"]
                                 pcount[c] += 1
 
-
+                                
                         elif attrib[c][5] != 'none' and NEXT[c][1] == 'periodic':    #for periodic behaviour with no jitter
                                 next_options[c][0] = [pcount[c] * int(attrib[c][5]), "periodic"]
                                 pcount[c] += 1
 
 
-                        if attrib[c][9] == 'yes' and NEXT[c][1] == 'bursty':       #for bursty shit
+                        if attrib[c][9] == 'yes' and NEXT[c][1] == 'bursty' :       #for bursty shit
 
 
                                 if attrib[c][12] == 'periodic' and attrib[c][14] == 'no':   #for periodic bursts with no jitter
@@ -204,7 +205,20 @@ while timestamp < int(config[3 + (proc_count*17+40)].split()[0]):
                                                 next_options[c][1] = [burstint_mult[c] * burstint[c] + rburst_time[c][rburst_count[c]], "bursty"] 
                                                 
                 if NEXT[c] != 'none':
+                        me_too[c] = 'NOPE!'
                         NEXT[c] = min(next_options[c])
+                        if next_options[c][0][0] == next_options[c][1][0]:
+                                me_too[c] = max(next_options[c])[1]
+
+                        # set new NEXT values
+                        if attrib[c][6] == 'yes' and me_too[c] == 'periodic':       #for periodic behaviour with jitter
+                                next_options[c][0] = [pcount[c]  * int(attrib[c][5]) + random.randint( int(attrib[c][7]), int(attrib[c][8]) ), "periodic"]
+                                pcount[c] += 1
+                                
+                        elif attrib[c][5] != 'none' and me_too[c] == 'periodic':    #for periodic behaviour with no jitter
+                                next_options[c][0] = [pcount[c] * int(attrib[c][5]), "periodic"]
+                                pcount[c] += 1
+                
                 counter[c] += 1
         timestamp += 1
                 
