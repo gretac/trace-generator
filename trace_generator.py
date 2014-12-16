@@ -52,22 +52,23 @@ burst_param = confread2(3 + (proc_count*14+29))
 burst_jitter = confread2(3 + (proc_count*15+31)) #list for whether periodic bursts contain jitter
 burst_min = confread2(3 + (proc_count*16+33)) #list of minimum burst jitter values
 burst_max = confread2(3 + (proc_count*17+35)) #list of maximum burst jitter values
-
+event_start = confread2(3 + (proc_count*18+37)) #when events begin
+event_end = confread2(3 + (proc_count*19+39)) #when events end
         
 ### GENERATES A LIST OF EVENT ATTRIBUTES ###
 attrib = []
 for k in range(proc_count):
         for c in range(event_count[k]):
-                attrib.append([proc_names[k], pid[k], event_list[k][c], tid[k][c], event_behav[k][c], behav_param[k][c], jitter[k][c], min_jitter[k][c], max_jitter[k][c], burst[k][c], burst_num[k][c], burst_len[k][c], burst_behav[k][c], burst_param[k][c], burst_jitter[k][c], burst_min[k][c], burst_max[k][c]])
+                attrib.append([proc_names[k], pid[k], event_list[k][c], tid[k][c], event_behav[k][c], behav_param[k][c], jitter[k][c], min_jitter[k][c], max_jitter[k][c], burst[k][c], burst_num[k][c], burst_len[k][c], burst_behav[k][c], burst_param[k][c], burst_jitter[k][c], burst_min[k][c], burst_max[k][c], event_start[k][c], event_end[k][c]])
 
-'''
+
 ## PRINT ATTRIBUTE LISTS ###                
 for i in range(len(attrib)):
         print attrib[i]
-'''
+
 
 ### CREATE TRACE & WRITE HEADER ###
-tracefile = open(config[3 + (proc_count*17+43)].split()[0],'w')
+tracefile = open(config[3 + (proc_count*20+44)].split()[0],'w')
 tracefile.write("TRACEPRINTER version 1.02\n"+"TRACEPARSER LIBRARY version 1.02\n"+" -- HEADER FILE INFORMATION --\n"+"       TRACE_FILE_NAME:: /dev/shmem/logfile.kev\n"+"            TRACE_DATE:: Mon Oct 28 17:19:14 2013\n"+"       TRACE_VER_MAJOR:: 1\n"+"       TRACE_VER_MINOR:: 01\n"+"   TRACE_LITTLE_ENDIAN:: TRUE\n"+"        TRACE_ENCODING:: 16 byte events\n"+"       TRACE_BOOT_DATE:: Mon Oct 28 11:46:56 2013\n"+"  TRACE_CYCLES_PER_SEC:: 1000000000\n"+"         TRACE_CPU_NUM:: 1\n"+"         TRACE_SYSNAME:: QNX\n"+"        TRACE_NODENAME:: localhost\n"+"     TRACE_SYS_RELEASE:: 6.5.0\n"+"     TRACE_SYS_VERSION:: 2010/07/09-14:44:03EDT\n"+"     TRACE_SYSPAGE_LEN:: 2144\n"+"         TRACE_MACHINE:: x86pc\n"+"-- KERNEL EVENTS --\n")
 
 ### PROCESS WRITE ###
@@ -93,13 +94,13 @@ for c in range(event_total):
                         rburst_time.append([])
                         if attrib[i][9] == "yes" and attrib[i][12] == "random":
                                 for k in range(int(attrib[i][13])):
-                                        rburst_time[i].append(random.randint(0 , int(config[3 + (proc_count*17+40)].split()[0])))
+                                        rburst_time[i].append(random.randint(int(attrib[c][17]) , int(attrib[c][18])))
                                         if k > 0 and (rburst_time[i][k] - rburst_time[i][k-1]) >= int(attrib[i][11]):
                                                 status = "BALLER"
                         else:
                                 status == "BALLER"
                 rburst_time[i] = sorted(rburst_time[i])
-
+print rburst_time
 
 
 ### CREATING LIST OF BURST INTERVALS ###
@@ -125,17 +126,17 @@ for c in range(len(attrib)):
         next_options[c].append(["xxx","xxx"])
         
         if attrib[c][4] == 'random':     #for random behaviour
-                next_options[c][0] = [random.randint(0,  int(config[3 + (proc_count*17+40)].split()[0])), 'random']
+                next_options[c][0] = [random.randint(0,  int(config[3 + (proc_count*20+41)].split()[0])), 'random']
 
         if attrib[c][6] == 'yes':       #for periodic behaviour with jitter
                 next_options[c][0] = [int(attrib[c][5]) + random.randint( int(attrib[c][7]), int(attrib[c][8]) ), "periodic"]
 
                 if attrib[c][9] == 'yes':       #for bursty shit
 
-                        if attrib[c][12] == 'periodic':   #for periodic bursts
+                         if attrib[c][12] == 'periodic':   #for periodic bursts
                                 next_options[c][1] = [burstint_mult[c] * burstint[c] + int(attrib[c][13]), "bursty"]
                                 
-                        elif attrib[c][12] == 'random':     #for random bursts
+                         elif attrib[c][12] == 'random':     #for random bursts
                                 next_options[c][1] = [rburst_time[c][0]  , "bursty"]
 
         elif attrib[c][5] != 'none':    #for periodic behaviour with no jitter
@@ -154,13 +155,13 @@ for c in range(len(attrib)):
 
 ### BEGIN PRINTING TO TRACE ###
 timestamp = 0
-while timestamp < int(config[3 + (proc_count*17+40)].split()[0]):
+while timestamp < int(config[3 + (proc_count*20+41)].split()[0]):
         for c in range(len(attrib)):               
 
-                if attrib[c][4] == 'random' and NEXT[c][1] == 'random' and random.randint(0,1000) == 500:     #for random behaviour
+                if attrib[c][4] == 'random' and NEXT[c][1] == 'random' and random.randint(0,1000) == 500 and timestamp >= int(attrib[c][17]) and timestamp <= int(attrib[c][18]):     #for random behaviour
                         next_options[c][0] = [timestamp+1, 'random']
 
-                if NEXT[c][0] != "none" and counter[c] == NEXT[c][0]:
+                if NEXT[c][0] != "none" and counter[c] == NEXT[c][0] and timestamp >= int(attrib[c][17]) and timestamp <= int(attrib[c][18]):
                         tracefile.write("t:" + str(timestamp) + " " + "CPU:00" + " " + "THREAD" + "  " + str(attrib[c][2]) + "      " + "pid:" + str(attrib[c][1]) + " " + "tid:" + str(attrib[c][3]) + "\n")
 
                         # set new NEXT values

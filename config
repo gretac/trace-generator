@@ -71,7 +71,7 @@ none none
 periodic periodic periodic periodic
 random none
 
-Parameters for bursty behaviour (burst periodid if periodic, number of bursts if random):
+Parameters for bursty behaviour (burst period if periodic, number of bursts if random):
 none none
 500 400 1000 1000
 2 none
@@ -90,6 +90,16 @@ Maximum jitter (ns):
 none none
 none 3 none 1
 none none
+
+Events begin occurring at:
+0 0
+0 0 0 0
+0 0
+
+Events stop occuring at:
+1000 1000
+1000 1000 1000 1000
+1000 1000
 
 Total trace length (ns):
 100000
