@@ -61,11 +61,11 @@ for k in range(proc_count):
         for c in range(event_count[k]):
                 attrib.append([proc_names[k], pid[k], event_list[k][c], tid[k][c], event_behav[k][c], behav_param[k][c], jitter[k][c], min_jitter[k][c], max_jitter[k][c], burst[k][c], burst_num[k][c], burst_len[k][c], burst_behav[k][c], burst_param[k][c], burst_jitter[k][c], burst_min[k][c], burst_max[k][c], event_start[k][c], event_end[k][c]])
 
-
+'''
 ## PRINT ATTRIBUTE LISTS ###                
 for i in range(len(attrib)):
         print attrib[i]
-
+'''
 
 ### CREATE TRACE & WRITE HEADER ###
 tracefile = open(config[3 + (proc_count*20+44)].split()[0],'w')
@@ -98,9 +98,8 @@ for c in range(event_total):
                                         if k > 0 and (rburst_time[i][k] - rburst_time[i][k-1]) >= int(attrib[i][11]):
                                                 status = "BALLER"
                         else:
-                                status == "BALLER"
+                                status = "BALLER"
                 rburst_time[i] = sorted(rburst_time[i])
-print rburst_time
 
 
 ### CREATING LIST OF BURST INTERVALS ###
